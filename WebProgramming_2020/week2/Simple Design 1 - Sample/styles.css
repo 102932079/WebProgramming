@@ -1,0 +1,67 @@
+html, body {
+    font-family: 'Spartan';
+    margin: 0;
+    background-color: #dfdfdf;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0px auto;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.header {
+    background-color: #8eba3e;
+    height: 250px;padding
+    text-align: center;
+    line-height: 250px;
+    font-family: 'Spartan';
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+    
+    font-weight: 600;
+}
+
+.body {
+    padding: 20px 40px 20px 40px;
+    background-color: white;
+
+}
+.body h1 {
+    font-weight: 700;
+}
+
+.body .signature {
+    font-style: italic;
+}
+
+.body .spacer {
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: #8eba3e;
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    background-color: #dfdfdf;
+    text-align: center;
+    padding: 20px 0px
+}
+.footer a {
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}

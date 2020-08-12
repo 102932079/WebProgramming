@@ -1,0 +1,56 @@
+html body {
+    background-color:rgba(113, 219, 71, 0.76)
+}
+
+.whole {
+    background-color:white;
+    border: 1px none;
+    box-shadow:3px 3px 3px 3px #888888; 
+    padding:30px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 400px;
+    height: 300px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px none;
+    box-sizing: border-box;
+    background-color: rgba(178, 189, 174, 0.76);
+  }
+
+.user {
+    
+}
+
+.pass {
+    
+}
+
+.login {
+    
+    
+}
+
+
+.not {
+    background-color:white;
+    color:grey;
+    height:20px;  
+    
+}
+
+.not a {
+    text-decoration: none;
+    color:green;
+}
+
+.not h6 {
+    text-align: center;
+}

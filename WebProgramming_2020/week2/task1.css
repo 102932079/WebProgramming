@@ -1,0 +1,63 @@
+html, body{
+    font-family:'Arial';
+    margin: 0;
+    background-color:white
+}
+
+.whole {
+    max-width: 800px;
+    margin:0px auto; 
+}
+
+.header {
+    background-color:olivedrab;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    font-family: 'Arial Black';
+}
+
+.header h1 {
+    color: ghostwhite;
+    margin: 0;
+    font-weight: 400;
+}
+
+.body {
+    padding: 20px 40px 20px 40px;
+    background-color: white;
+}
+
+.body h1 {
+    font-weight: 700;
+}
+
+.body .sign {
+    font-style: italic;
+}
+
+.body .button {
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.buttontext {
+    background-color: olivedrab;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    background-color: #dfdfdf;
+    text-align: center;
+    padding: 20px 0px
+}
+
+.footer a {
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}

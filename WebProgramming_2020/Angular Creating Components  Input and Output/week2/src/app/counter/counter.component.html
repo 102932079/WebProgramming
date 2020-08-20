@@ -1,3 +1,15 @@
-<div onclick="onComponentClick(Sevent)" class="counter" [class.active]="active;">
+<!-- -->
+<!-- there are two counter but it wont cause issue , one of them are class another is variable-->
+<!-- onclick is standard for html5 file-->
+<!-- angualr has binding, binding syntax going ahead attach to some element, what we do the binding will change for nepulate the element-->
+<!-- {{expression}}-->
+<!-- binding event as patasis-->
+<!-- binding those class color to the div [style.color]="fontColour"-->
+<!-- with all those binding can save all the hoascal to get id and define all the event -->
+<!-- binding also can work with class -->
+<!--<p>counter works!</p> -->
+<div onclick="onComponentClick($event)" class="counter" [class.active]="active">
     <h1>{{<title>}}</h1><h2>{{counter}}</h2>
 </div>
+
+

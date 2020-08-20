@@ -1,14 +1,30 @@
+/**
+  *
+  */
 import { Component } from '@angular/core';
 import { Contact } from './contact/contact';
-
+//derictive template syntax binding syntax all git work for angular 
+//component decorator to define the class down there component
 @Component({
+  //what compoenet we going to display and what to use html file
+  //selector is related to tag
   selector: 'app-root',
   templateUrl: './app.component.html',
+  //css is total independent
   styleUrls: ['./app.component.css']
 })
 export class AppComponent
 {
   title = 'week2';
+
+  /**
+  * total: number = 0;
+  * onCounted(value: number)
+  * {
+  * 
+  * }
+  */
+
   //create array equal to a empty array
   //image url address name title, object orientied programming, build a class and descrip the informaiton about content
   //interate the content for able to display in array

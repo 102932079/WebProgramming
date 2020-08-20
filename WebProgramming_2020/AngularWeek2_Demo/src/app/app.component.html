@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+
+<button (click)="onToggleContacts()">Toggle Contacts</button>
+
+<div *ngIf="showContacts === true">
+    <app-contact *ngFor="let contact of contacts" [contact]="contact"></app-contact>
+</div>

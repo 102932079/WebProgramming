@@ -1,0 +1,6 @@
+<h1 [class.title-mx]="contact.title == 'Mx'" [class.title-ms]="contact.title == 'Ms'"
+    [class.title-mr]="contact.title == 'Mr'">
+    {{contact.title}}. {{contact.name}}
+</h1>
+<span *ngIf="contact.title =='Mx'">Ahh i like your style!</span>
+<p>{{contact.address}}</p>

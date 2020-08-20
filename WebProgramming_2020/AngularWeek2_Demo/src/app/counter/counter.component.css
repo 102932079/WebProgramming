@@ -1,0 +1,13 @@
+.counter {
+    border: solid 1px black;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.active {
+    color: red;
+}

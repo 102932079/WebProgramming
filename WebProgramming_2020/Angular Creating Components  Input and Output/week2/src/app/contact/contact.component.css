@@ -8,3 +8,22 @@
     margin: 5px;
 
 }
+
+/*style the text in each component*/
+
+.title-mx
+{
+    color: orange;
+}
+
+.title-mr
+{
+    color: blue;
+}
+
+.title-ms
+{
+    color: pink;
+}
+
+/*built-in directives, show/hide vs .Ngif  attribute , class, and style bindlings depends on boolean vaules*/

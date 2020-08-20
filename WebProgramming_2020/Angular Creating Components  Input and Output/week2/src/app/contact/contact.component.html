@@ -1,4 +1,12 @@
 <!-- the output here related to component , with angular it will show the proterty that comes from, hold down ctrl to see-->
-<h1>{{contact.title}}, {{contact.name}}</h1>
+<!-- not be able to use "" inside "" use '' instead-->
+<!-- formatting for easy reading-->
+<h1 
+    [class.title-mx]="contact.title == 'Mx'" 
+    [class.title-mr]="contact.title == 'Mr'" 
+    [class.title-ms]="contact.title == 'Ms'">
+    {{contact.title}}, {{contact.name}}
+</h1>
+<span *ngIf="contact.title == 'Mx'">Ahh i like your style!</span>
 <p>{{contact.address}}</p>
 <!-- with professional coding and design try not to use div around it-->

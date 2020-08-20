@@ -1,7 +1,22 @@
 <h1>{{title}}</h1>
-<h3>
-    {{total}}
-</h3>
-<app-counter title="bob" (counted)="onCounted($event)"></app-counter>
-<app-counter title="Ums and Ahhs" (counted)="onCounted($event)"></app-counter>
-<app-counter title="Crashes" (counted)="onCounted($event)"></app-counter>
+<!-- onclick() binding on that button-->
+<button (click)="onToggleContacts()">Toggle Contacts</button>
+<!-- more dynamic data,ngif ngfor , use === beacuse javascript-->
+<div *ngIf="showContacts === true">
+    <!-- * star for built in directive case sensitive, the compoent able to change the order for -->
+    <ul>
+        <!-- make it work with ngfor, do need follow the syntax, let keyword in javascript variable defination-->
+        <!-- looping contact in contacts ,like for each loop, collectioin -->
+        <li *ngFor="let contact of contacts">
+            <!--<app-contact name="{{contacts}}"></app-contact>  this will output all the element in array together which is not good, -->
+            <app-contact name="{{contact}}"></app-contact>
+        </li>
+
+    </ul>
+    
+    <!-- pass in date with name,but name been used twice need define the name as property,{name}-->
+    <!--d<app-contact name="Lachlan"></app-contact> use above variable-->
+    
+</div>
+
+<!-- app-contact there are independent and isolated-->

@@ -1,0 +1,10 @@
+/* how we can style a component with uniqe way host,able to style the raw component it self, host = app-contact, host is only angular thing*/
+/*block here is important,angular .jason can do it also*/
+:host
+{
+    border: 1px black solid;
+    padding: 10px;
+    display: block;
+    margin: 5px;
+
+}

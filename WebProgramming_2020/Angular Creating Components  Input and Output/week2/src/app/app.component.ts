@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Contact } from './contact/contact';
 
 @Component({
   selector: 'app-root',
@@ -11,13 +12,30 @@ export class AppComponent
   //create array equal to a empty array
   //image url address name title, object orientied programming, build a class and descrip the informaiton about content
   //interate the content for able to display in array
-  contacts:string[] = [
-    "Bob",
-    "Matt",
-    "Frank",
-    "Ben",
-    "Lachlan",
-    "Coryn"
+  //convert the string here to contact, contact will be a class
+  //open in integrated terminal- create contact class in contact folder
+  //ng g class contact
+  contacts: Contact[] = [
+    new Contact("Bob", "Mx", "1 Queen Street, Melbs", "https://placehold.it/200x200" ),
+    new Contact("Frank", "Mr", "2 Queen Street, Melbs", "https://placehold.it/200x200" ),
+    new Contact("Jess", "Ms", "3 Queen Street, Melbs", "https://placehold.it/200x200" ),
+    new Contact("George", "Mx", "4 Queen Street, Melbs", "https://placehold.it/200x200" ),
+  ];
+
+    //{
+      //need define all attribute
+      //name: "Bob",
+      //address: "1 Queen Street, Melbs",
+      //imageUrl: "https://placehold.it/200x200",
+      //title: "Mx"
+
+    //}
+    //"Bob",
+    //"Matt",
+    //"Frank",
+    //"Ben",
+    //"Lachlan",
+   // "Coryn"
   ];
 
   

@@ -7,10 +7,12 @@
     <ul>
         <!-- make it work with ngfor, do need follow the syntax, let keyword in javascript variable defination-->
         <!-- looping contact in contacts ,like for each loop, collectioin -->
-        <li *ngFor="let contact of contacts">
+        
             <!--<app-contact name="{{contacts}}"></app-contact>  this will output all the element in array together which is not good, -->
-            <app-contact name="{{contact}}"></app-contact>
-        </li>
+            <!--pass in contact instade name, bind the variable and pass the variable class of contact pass into it -->
+            <!--until now all the content will showing  -->
+            <app-contact *ngFor="let contact of contacts" [contact]="contact"></app-contact>
+        
 
     </ul>
     

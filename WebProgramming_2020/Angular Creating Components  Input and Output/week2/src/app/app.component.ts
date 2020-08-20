@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent
+{
   title = 'week2';
+  total: number = 0;
+
+  onCounted(value:number)
+  {
+    this.total += value;
+  }
 }

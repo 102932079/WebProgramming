@@ -1,0 +1,11 @@
+<!-- can not just using {{username}} without any address but we can use accountservice here then sub element of username for variable-->
+<!--  accountservice here just acting as a class -->
+<!--  username as service-->
+<!--  a good pratice here is define ngIf, if not equal to a null then display below-->
+<div *ngIf="accountService.username != null">
+    <h1>Your Username: {{accountService.username}}</h1>
+    <p>Oh hello there {{accountService.username}}, nice to meet you.</p>
+</div>
+
+  <!--  -->
+    <!-- what this profile component do is  to display the profile information here if the username is set -->

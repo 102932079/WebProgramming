@@ -1,10 +1,8 @@
-<!-- -->
-<!-- ng nerate --help we can use ng g to create componenet-->
-<h1>{{title}}</h1>
-<!-- onclick() binding on that button-->
-<button (click)="onToggleContacts()">Toggle Contacts</button>
+<h3>List of Contacts</h3>
+<!-- for name of the component we use contactList but the angular will change them into the angular standard names -->
 <!-- more dynamic data,ngif ngfor , use === beacuse javascript-->
-<div *ngIf="showContacts === true">
+<!-- adjust the syntax here cs.sc -->
+<div *ngIf="contactsService.showContacts === true">
     <!-- * star for built in directive case sensitive, the compoent able to change the order for -->
     <ul>
         <!-- make it work with ngfor, do need follow the syntax, let keyword in javascript variable defination-->
@@ -13,7 +11,8 @@
             <!--<app-contact name="{{contacts}}"></app-contact>  this will output all the element in array together which is not good, -->
             <!--pass in contact instade name, bind the variable and pass the variable class of contact pass into it -->
             <!--until now all the content will showing  -->
-            <app-contact *ngFor="let contact of contacts" [contact]="contact"></app-contact>
+            <!-- adjust the syntax here of cs.c -->
+            <app-contact *ngFor="let contact of contactsService.contacts" [contact]="contact"></app-contact>
         
 
     </ul>

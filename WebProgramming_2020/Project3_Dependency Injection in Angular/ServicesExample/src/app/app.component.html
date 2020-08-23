@@ -1,0 +1,12 @@
+<!--  -->
+<!-- the profile component is the display template those app-profile can easily dulpulicate for complex funtion -->
+<!-- <app-profile></app-profile>-->
+<!-- below there is multiple layer of components -->
+<!-- we able to do this beacuse of the service there  -->
+<app-dummy></app-dummy>
+<!-- place a simple button it has a click event of performlogin() it will run the performlogin method when click-->
+<!-- <button (click)="accountService.login()"></button> i can use but need pass a value in so for now we just use below-->
+<button (click)="performLogin()"></button>
+
+<!-- we click this button here , it will go ahead to manipulate the service by calling it method on it , that method on the service will go manipulate itself by changing its own value , username which back into the app component , well the username changed which is back into component file and manipulate these ngif does not equal to null anymore then display below h1 and p that how the whole process work !!!!!!!!!!!!!!! important -->
+

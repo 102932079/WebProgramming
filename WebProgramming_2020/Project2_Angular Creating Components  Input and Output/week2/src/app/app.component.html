@@ -1,0 +1,14 @@
+<!-- -->
+<!--quick commenting ctrl + / -->
+<!-- the plan here is all the logic should be in service or child component, the root component file .ts shoudl be quite empty , just display that what you need to do for the application, and thats it ,we need to move out list of contact into a seperate component(the whole div ) , th toggle button will kept in app-component html file,may shouldn't but for demostrate that we can pass things around  , and create another component for adding a contact, for contact list we need a component for all the list for contact and another component of all the indevidual contact    -->
+<!-- ng nerate --help we can use ng g to create componenet-->
+<h1>{{title}}</h1>
+<!-- horroztal rule -->
+<hr>
+
+<!-- just simply display my contact list here not storing any information and a little bit of layout text button can gone now and just it-->
+<app-contact-list></app-contact-list>
+<hr>
+<app-contact-create></app-contact-create>
+<!-- onclick() binding on that button-->
+<!-- <button (click)="onToggleContacts()">Toggle Contacts</button> -->

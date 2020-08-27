@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        /* powerful with interface modification */
+        .wrapper
+        {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap:1em;
+            /* start end center stretch postion left and right*/
+            justify-items: stretch;
+             /* start end center stretch postion top and bottom*/
+            align-items: stretch;
+           
+
+        }
+
+       
+        .wrapper,div
+        {
+          
+            background: #eeeeee;
+            padding: 1em;
+        }
+        
+        .wrapper,div:nth-child(odd)
+        {
+      
+            background: #dddddd;
+        }
+
+        .box1
+        {
+            /* align-self:start; */
+            /* from 1-3 taking positon */
+            grid-column: 1/3;
+            grid-row:1/3;
+
+        }
+
+        .box2
+        {
+            /* align-self:end; */
+            /* stay where it is */
+            grid-column: 3;
+            grid-row:1/3;
+        }
+
+        .box3
+        {
+            /* justify-self: end; */
+            grid-column: 2/4;
+            grid-row:3;
+        }
+
+        .box4
+        {
+            /* we can overlap element which is flexbox cant do */
+            grid-column:1;
+            grid-row:2/4;
+            border: 1px solid #333333;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <div class="box box1">Box 1</div>
+       <div class="box box2">Box 2</div>
+       <div class="box box3">Box 3</div>
+       <div class="box box4">Box 4</div>
+    </div>
+</body>
+</html>

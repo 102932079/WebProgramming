@@ -1,0 +1,98 @@
+/* difine the layout for small screen divece like phone */
+/* when the min width hit certain point (768px) the colmn will go away by drap page windows will demostrate the layout will change itself responsive for multi platform*/
+@media(min-width:768px)
+{
+        .container-1
+    {
+        /* we want all three container at same level side by side(no float)  signal for string using flexbox*/
+        display: flex;
+        /* align-items: flex-start will adjust the height layout */
+        /* at top */
+        /* align-items: flex-start; */
+        /* at bottom */
+        /* align-items: flex-end;  */
+        /* at center */
+        /* align-items: flex-center; */
+        /* by defalut */
+        align-items: stretch;
+        /* layout the box vertical */
+        /* flex-direction: column; */
+
+    }
+
+    .container-2
+    {
+        /* side by side */
+        display: flex;
+        /* define justify-content: flex-start; by defalut */
+        /* justify-content: flex-start; pull all boxes from start*/
+        /* justify-content: flex-end;  push all the boxes to the end*/
+        /* justify-content: center; */
+        /* split and spderd out and no margin at top bottom only margin at side*/
+        justify-content: space-between;
+        /* space all around */
+        /* justify-content: space-around; */
+
+    }
+
+}
+
+.container-3
+{
+    display: flex;
+    /* box wrap down to new line */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* to add border for multiple id class div element */
+/* basic border and padding for demo */
+.container-1 div, .container-2 div, .container-3 div
+{
+    border: 1px #cccccc solid;
+    padding: 10px;
+}
+
+
+/*  by defalut all the box will at same height */
+.box-1 
+{
+    /* assign element all box flex 1 will be even sprad*/
+    /* flex:1-5 (when pushed to certain lenth it will stop pushing around)*/
+    /* flex: 1;
+    flex: 3;
+    flex: 4;
+    flex: 5; */
+    flex: 2;
+    /* order 1-3 can assign box to certain positon */
+    order: 2;
+    
+
+}
+
+.box-2 
+{
+    flex: 1;
+    order: 1;
+
+}
+
+.box-3
+{
+    flex: 1;
+    order: 3;
+
+}
+
+.container-2-box
+{
+    /* set 20% for each box but still got 40% blank we wish to define margin*/
+    /* Width: 20% */
+    /* width: 27%; */
+    /* in flexbox here we using flex-basis to replace width */
+    flex-basis: 27%;
+}
+
+.container-3-box
+{
+    flex-basis: 12%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids</title>
+    <!-- style in html shoud stay within head -->
+    <style>
+        .wrapper,div
+        {
+            display: grid;
+            /* we need find the width of columns development to do that we use*/
+            /* main for 70 side for 30 the new elements will contuinues follow this maps */
+            /* the number here will decide how to distribute the first layout will the div below 40% 30% 30% */
+            grid-template-columns: 70% 30%;
+            /*  we don't using margin left and right here we use column gap */
+            grid-column-gap: 1em;
+            /* margin top and bottom called row gap*/
+            grid-row-gap: 1em;
+            /* all round grid-gap: 1em */
+            /* grid-gap: 1em; */
+        }
+        /* toggle element within class using , not > */
+        .wrapper,div
+        {
+            /* eee darker gray */
+            background: #eeeeee;
+            padding: 1em;
+        }
+        /* every odd element in warpper class div */
+        .wrapper,div:nth-child(odd)
+        {
+            /* ddd ligher gray */
+            background: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .rapper tab will generate the div with rapper class -->
+    <!-- lots of people call it grid class or container class -->
+    <div class="rapper">
+
+        <div>
+            <!-- main layout -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ipsam debitis! Asperiores iure nostrum officiis illum maiores error quibusdam, corrupti laudantium consectetur pariatur sint totam molestiae illo rerum aperiam dolore.
+        </div>
+
+        <div>
+            <!-- side bar -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem harum, quos animi vitae porro inventore ad iusto alias temporibus hic consectetur, sequi quasi quibusdam sit numquam sed, placeat atque.
+        </div>
+
+        <div>
+            <!-- main layout -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ipsam debitis! Asperiores iure nostrum officiis illum maiores error quibusdam, corrupti laudantium consectetur pariatur sint totam molestiae illo rerum aperiam dolore.
+        </div>
+
+        <div>
+            <!-- side bar -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum autem harum, quos animi vitae porro inventore ad iusto alias temporibus hic consectetur, sequi quasi quibusdam sit numquam sed, placeat atque.
+        </div>
+
+    </div>
+</body>
+
+</html>

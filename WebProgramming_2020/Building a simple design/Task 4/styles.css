@@ -1,0 +1,59 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Roboto';
+}
+
+.box
+{    
+    width: 600px;
+    text-align: center;    
+    border: 0;
+    padding: 40px 20px;
+    background-color: darkblue;    
+    margin: auto;
+}
+
+.social
+{
+    display: flex;
+    margin: 0;
+}
+
+.social button
+{
+    font-size: 14px;
+    width: 50%;
+    height: 40px;
+    border: 0;
+    color: white;
+
+}
+
+.social button.facebook
+{
+    background-color: #3d599b;
+}
+
+.social button.twitter
+{
+    background-color: #53abf1;
+}
+
+.inline
+{
+    display: flex;
+    border: 1px solid yellow;    
+}
+
+.inputs1
+{
+    flex-basis: 50%;
+    border: 1px solid red;
+    
+}
+

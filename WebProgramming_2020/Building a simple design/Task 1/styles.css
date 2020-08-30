@@ -1,0 +1,85 @@
+/* element do not need . to target items */
+html, body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan';
+}
+
+.container
+{
+    margin: 10px;
+    max-width: 600px;    
+}
+
+
+.header 
+{
+    background-color: greenyellow;       
+}
+
+/* same with html body h1 a no . need */
+.header h1 
+{    
+    color:white;
+    font-weight: 1000;
+    text-align: center;
+    /* The line-height property specifies the height of a line. */
+    line-height: 250px;
+}
+
+.body
+{
+    text-align: left;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+   
+}
+
+.button 
+{  
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border: 0;     
+}
+
+.button a 
+{
+    background-color: greenyellow;
+    padding: 20px;
+    color:white;
+    text-decoration: none;  
+    border-radius: 10px;  
+    border: 1px hidden white;
+    
+}
+
+.body a
+{
+    color: greenyellow;
+    text-decoration: none;
+}
+
+
+.signature
+{
+    font-style: italic;
+}
+
+.footer
+{    
+    text-align: center;
+    background-color: #dfdfdf;
+    padding: 30px 50px; 
+    color: gray;   
+}
+
+.footer a
+{
+    text-decoration: none;
+    font-weight: 800;
+    color: grey;
+}

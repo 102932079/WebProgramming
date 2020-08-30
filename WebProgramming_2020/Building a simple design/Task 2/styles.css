@@ -1,0 +1,92 @@
+
+/* The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+
+*
+{
+    box-sizing: border-box;
+}
+
+html, body
+{
+    background-color:greenyellow;
+    margin: 0;
+    font-family: 'Spartan';
+}
+
+.container
+{
+    /* flex box in use */
+    display: flex;
+    /* Viewport Height (vh). This unit is based on the height of the viewport. A value of 1vh is equal to 1% of the viewport height. */
+    height: 100vh;
+    /* lign-items:  will adjust the height layout  top middle bottom*/
+    align-items: center;
+    /* boxes element locate at left-start right-end or middle-center */
+    justify-items: center;
+}
+
+.box    
+{
+    width: 400px;
+    background-color: white;
+    padding: 40px;
+    
+    /* shadow effect */
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    /* Positioning DIV element at center of screen */
+    margin: auto;
+}
+
+.box p
+{
+    text-align: center;
+    color: grey;
+
+}
+
+.box a
+{
+    color: green;
+    text-decoration: none;
+
+}
+
+.inputs
+{
+    padding: 10px;
+}
+
+/* .inputs is class input is element other things under element is attribute*/
+.inputs input
+{
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f2;
+    color: black;
+    border: 0;
+    padding: 10px 20px;
+    font-size: 16px;
+
+}
+
+/* The :focus selector is used to select the element that has focus. exp: a input bar 100px when foucsed 250px */
+.inputs input:focus
+{
+    border: 0;
+}
+
+.inputs input::placeholder
+{
+    color: grey
+}
+
+.inputs button
+{
+    width: 100%;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: 0;
+}

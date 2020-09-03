@@ -1,3 +1,5 @@
+// ng g class planet (create class)
+//Create a planet class with the following properties: name: string moons: number distancefromSun: number 
 export class Planet
 {
     name: string

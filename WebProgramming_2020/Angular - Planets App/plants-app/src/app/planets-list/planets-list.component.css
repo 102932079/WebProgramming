@@ -1,0 +1,7 @@
+.solarSystem
+{
+    /* vw */
+    width: 100vw;
+    display: flex;
+    padding-top: 300px;
+}

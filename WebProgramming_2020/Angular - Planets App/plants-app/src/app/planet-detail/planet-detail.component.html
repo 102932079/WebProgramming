@@ -1,0 +1,39 @@
+<div class="container">
+    <!-- <div class="planetName"> -->
+        <!-- keyup  -->
+        <!-- <input type="text" (keyup)="updatePlanetName($event)" placeholder="Set Name"> -->
+        <!-- <p>{{planet.name}}</p> -->
+    <!-- </div> -->
+
+    <!-- <div class="planetMoons"> -->
+        <!--  -->
+        <!-- <input type="text" (keyup)="updatePlanetMoons($event)" placeholder="Set Moons" > -->
+        <!-- <p>{{planet.moons}}</p> -->
+    <!-- </div> -->
+
+    <!-- <div class="planetDist"> -->
+        <!--  -->
+        <!-- <input type="text" (keyup)="updatePlanetDis($event)" placeholder="Set Distance"> -->
+        <!-- <p>{{planet.distancefromSun}}</p> -->
+    <!-- </div> -->
+
+    <!-- user input click event  -->
+    <!-- Get user input from the $event object key up -->
+
+    <p #name (click)="selectName()">{{planet.name}}</p>
+
+    <p #moons (click)="selectMoons()">{{planet.moons}}</p>
+
+    <p #dist (click)="selectDist()" >{{planet.distancefromSun}}</p>
+
+    <!-- ngif phase swtich-->
+    <a href="#" *ngIf="!editing" (click)="beginEdit()">Edit</a>
+
+    <a href="#" *ngIf="editing" (click)="stopEdit(updatePlanetInfo.value)">Knows</a>
+
+    <button id="del" (click)="deletePlanet(planet)"> Delete </button>3
+    <input type="text" #updatePlanetInfo [value]="placeholder">
+</div>
+
+<!-- Allow the detail component to edit the existing values of each planet. -->
+<!-- <input (keyup)="updatePlanetDist($event)" type="text" placeholder="Set Dist">  -->

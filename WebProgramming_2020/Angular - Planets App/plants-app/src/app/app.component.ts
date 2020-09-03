@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { PlanetService } from './Service/planet.service'
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'plants-app';
+  public planetsSercie = PlanetService;
+
+  constructor(planetService: PlanetService)
+  {
+    this.planetsSercie = PlanetService;
+  }
 }

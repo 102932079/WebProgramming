@@ -1,0 +1,15 @@
+<h1>Create a new planet here</h1>
+
+<input type="name" #name placeholder="Planet name?">
+<!-- # -->
+
+<input type="moons" #moons placeholder="# moons?">
+<!-- volocity unit -->
+<input type="dist" #distToSun placeholder="Distance to the sun (*Mil Kms)">
+
+<!-- submit button -->
+
+<button (click)="createPlanet(name.value, moons.value, distToSun.value)">Create</button>
+
+
+<!-- class feild -->

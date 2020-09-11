@@ -28,22 +28,7 @@ export class AppComponent
   // those login should be in server
   login()
   {
-    // get a url in there
-    // to get a data dont doesn't define what to do after get data
-    // import articles envelope before use
-    // get requeist for the end point will be this type
-    // get -- post
-    let request = this.httpClient.get<ArticlesEnvelope>("https://swindev.me/articles");
-    // arrow funciton here is for when we get the response we will get to
-    // response is variable name chould be anything else data balh balh
-    request.subscribe((response) => 
-    {
-      console.log(response);
-      // need crate a class for this
-      this.art = response.articles;
-
-    })
-    // .where(x=> x.Id == "1")
+    
   }
   
 }

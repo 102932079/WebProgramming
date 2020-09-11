@@ -16,7 +16,8 @@ export class AppComponent
   title = 'angularconduit';
   //add that client to component class
   //crate an array of aritcles
-  private art: any[];
+  // into service
+  //private art: any[]; 
   private httpClient: HttpClient;
   constructor( httpClient: HttpClient)
   {
@@ -24,6 +25,7 @@ export class AppComponent
   }
   // this. to get this element
   //response(values)
+  // those login should be in server
   login()
   {
     // get a url in there

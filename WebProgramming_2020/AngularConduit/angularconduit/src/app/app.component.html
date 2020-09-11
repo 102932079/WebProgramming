@@ -1,6 +1,16 @@
 <!-- ng new to create angular project  -->
 <!-- remember to submit before contiures -->
 <!-- run ng serve before delete the dealute code in html -->
-<!-- keep most of html in server -->
+<!-- keep most of html in servies -->
+
+
 
 <h1>{{title}}</h1>
+
+<button (click)="login()">Login</button>
+
+<ul>
+    <li *ngFor="let acrt of art">
+        <small>{{acrt.title}}</small>{{acrt.title}}
+    </li>
+</ul>

@@ -27,6 +27,10 @@ export class ArticlesService {
      * go and get a articlesenvelpe from the server and store it locally
      */
 
+      // this. to get this element
+  //response(values)
+  // those login should be in server
+
     get()
     {
         // get a url in there

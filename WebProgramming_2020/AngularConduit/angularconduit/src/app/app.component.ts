@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 // import HTTP symbols.
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { ArticlesEnvelope } from "./article";
+import { ArticlesEnvelope, Article } from "./article";
+
+import { ArticlesService}
 @Component
 (
   {
@@ -18,17 +20,15 @@ export class AppComponent
   //crate an array of aritcles
   // into service
   //private art: any[]; 
-  private httpClient: HttpClient;
-  constructor( httpClient: HttpClient)
+  //httpclient - articlesservcie
+  public art: Article[];
+  // httpclient - articlesservice
+  // make it public to allow template file to access it
+  public articlesService: ArticlesService;
+  constructor( articlesService: ArticlesService)
   {
-    this.httpClient = httpClient;
+    this.articlesService = articlesService;
   }
-  // this. to get this element
-  //response(values)
-  // those login should be in server
-  login()
-  {
-    
-  }
-  
+ 
+ 
 }

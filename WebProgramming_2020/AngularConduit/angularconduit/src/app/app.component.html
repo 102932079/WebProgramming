@@ -7,10 +7,11 @@
 
 <h1>{{title}}</h1>
 
-<button (click)="login()">Login</button>
-
-<ul>
-    <li *ngFor="let acrt of art">
+<button (click)="articlesService.get()">Login</button>
+<div *ngIf="articlesService.loading">Loading...</div>
+<!-- <ul *ngIf="articlesService.loaded"> -->
+<ul *ngIf="!articlesService.loading">
+    <li *ngFor="let acrt of articlesService.articles">
         <small>{{acrt.title}}</small>{{acrt.title}}
     </li>
 </ul>

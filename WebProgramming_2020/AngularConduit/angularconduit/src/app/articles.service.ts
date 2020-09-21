@@ -10,7 +10,8 @@ import { Article } from './article';
 })
 
 
-export class ArticlesService {
+export class ArticlesService 
+{
     // defalut to a empty array
     // dont have to define as public
     articles: Article[] = [];
@@ -38,12 +39,13 @@ export class ArticlesService {
         // import articles envelope before use
         // get requeist for the end point will be this type
         // get -- post
-        let request = this.httpClient.get<ArticlesEnvelope>("https://swindev.me/articles");
+        //{headers:}
+        let request = this.httpClient.get<ArticlesEnvelope>("https://swindev.me/articles", );
         // arrow funciton here is for when we get the response we will get to
         // response is variable name chould be anything else data balh balh
         this.loading = true;
         this.loaded = false;
-
+        // request wont be excuted unless we had observer down below
         request.subscribe((response) => 
         {
             this.articles = response.articles;
@@ -56,5 +58,40 @@ export class ArticlesService {
 
         })
         // .where(x=> x.Id == "1")
+    }
+    // methods anonymous circle
+    // take in an article
+    // two field
+    // transsion this parts into a post request
+    createAnonymous(username: string, article: Article)
+    {
+    // go ahead and create the request3
+    // to a url 
+    // next step is speciafic a body
+    //two type , first one is what we getting
+    // what is the body is what data we are going to put in this
+        let request = this.httpClient.post<ArticlesEnvelope, CreateAnonymousCommand>("http://swindev.me?articles?anonymous", {
+            // create this without class
+            username: username,
+            article: article
+        } as CreateAnonymousCommand );
+        // this.loading = true;
+        // this.loaded = false;
+
+        request.subscribe((response) => {
+            // let array = [];
+            // array.push(this.articles);
+            // array.push(response.article);
+            //... already exist
+            //console.log(this.articles)
+            this.articles = [...this.articles, response.article];// is a new array, with new values added
+            this.get();
+            // this.loading = false;
+            // this.loaded = true;
+            //console.log(this.articles)
+            //.push(response.article)
+            //console.log(response);
+        });
+
     }
 }

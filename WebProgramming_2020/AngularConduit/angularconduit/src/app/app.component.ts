@@ -29,6 +29,18 @@ export class AppComponent
   {
     this.articlesService = articlesService;
   }
+
+  create()
+  {
+    //new Article
+    // property exsit and that it
+    this.articlesService.createAnonymous("lachlan", {
+      title: "Lachlan teaches HTTP POST",
+      description: "BLAH BLAH BLAH",
+      body: "Do this and that and bamn",
+    })
+    // dont say as article here beacuse its alrady knows
+    // repons real time insert locally
  
  
 }

@@ -2,12 +2,18 @@
 <!-- remember to submit before contiures -->
 <!-- run ng serve before delete the dealute code in html -->
 <!-- keep most of html in servies -->
+<!-- need create mutiple componeent for the project this only for quick demo so everything compalied together -->
 
 
 
 <h1>{{title}}</h1>
 
 <button (click)="articlesService.get()">Login</button>
+
+<br>
+
+<button (click)="create()">Create</button>
+
 <div *ngIf="articlesService.loading">Loading...</div>
 <!-- <ul *ngIf="articlesService.loaded"> -->
 <ul *ngIf="!articlesService.loading">

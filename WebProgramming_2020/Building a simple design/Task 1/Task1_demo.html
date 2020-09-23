@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Import external font family for google font -->
+    <link href="https://fonts.googleapis.com/css?family=Spartan:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300i&display=swap" rel="stylesheet">
+
+    <!-- Using CSS Internal - by using a <style> element in the <head> section -->
+    <style>
+        /* # is an id selector . is a class selector */
+        .container
+        {
+            width: 45%;
+            margin: 40px auto;
+            /* browser/rendering engine vendor prefixes. */
+            -webkit-box-shadow: 7px 2px 5px -7px rgba(0,0,0,0.69);
+            -moz-box-shadow: 7px 2px 5px -7px rgba(0,0,0,0.69);
+            box-shadow: 7px 2px 5px -7px rgba(0,0,0,0.69);
+        }
+
+        .header
+        /* difine header green block */
+        {
+            background-color: #8eba3e;
+            font-family: Spartan, sans-serif;
+            height: 300px;
+            text-align: center;
+            line-height: 350px;
+            color: white;
+        }
+
+        .header h1
+        /* make text larger */
+        {
+            font-size: 40px;
+        }
+
+        .body
+        /* body block text display and spacing*/
+        {
+            padding: 50px;
+            padding-top: 10px;
+            line-height: 1.6;
+        }
+
+        .body h1
+        /* define text size and style */
+        {
+            font-family:  Spartan, sans-serif;
+            font-size: 30px;
+        }
+
+        .body p , .footer
+        /* define text style for footer and body p */
+        {
+            font-family: Spartan, sans-serif;
+            color: #5c5c5c;
+            font-size: 18px;
+        }
+
+        .footer
+        /* define footer block */
+        {
+            /* css unit  Absolute Lengths or Relative Lengths vh Relative to 1% of the height of the viewport*/
+            background-color: #efefef;
+            height: 20vh;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .linkbutton
+        /* define button with flexbox a-v j-h  */
+        {
+            background-color: #8eba3e;
+            width: 400px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .link
+        /* define the text on the button */
+        {
+            text-decoration: none;
+            text-align: center;
+            color: #ffffff;
+            font-size: 23px;
+            font-family: Spartan, sans-serif;
+        }
+
+        .space
+        /* move the space div into a flexbox and locate in the middle */
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .linkstyle a
+        /* define bacon ipsum */
+        {
+            text-decoration: none;
+            color: #8eba3e;
+        }
+
+        #sign
+        /* define mr pen italic */
+        {
+            font-family: Libre Franklin, sans-serif;
+        }
+
+        
+
+
+
+
+        
+    </style>
+
+
+</head>
+<body>
+    <!-- dot class name tab class or id-->
+    <div class="container">
+
+        <div class="header">
+            <h1>SOMETHING BIG...</h1>
+        </div>
+
+        <div class="body">
+
+            <h1>Hi Stranger,</h1>
+            <p>
+                <!-- line break br -->
+                Kielbasa venison ball tip shankle. Boudin prosciutto landjaeger,<br/>
+                pancetta jowl turkey tri-tip porchetta beef pork loin drumstick.<br/>
+                Franfurter short ribs kevin pig ribeye drumstick bacon kielbasa. Pork <br/> 
+                loin brisket biltong, pork belly filet mignon ribeye pig ground round<br/>
+                porchetta turducken turkey. Pork belly beef ribs sausage ham hock,<br/>
+                ham doner frankfurter pork chop tail meatball beef pig meatloaf short <br/> 
+                ribs shoulder. filet mignon ham hock kielbasa beef ribs shank. <br/>
+                Venison swine beef ribs sasuage pastrami shoulder.                
+            </p>
+
+            <div class="space">
+
+                <div class="linkbutton">
+                    <!-- <b> Defines bold text -->
+                    <a href="#" class="link"><b>Share the Awesomeness</b></a>
+                </div>
+
+            </div>
+
+            <div>
+                <p>
+                    <!-- The <span> tag is an inline container used to mark up a part of a text, or a part of a document. -->
+                    By the way, if you're wondering where you can find more of this fine 
+                    meaty filler, visit <span class="linkstyle"><a href="#">Bacon Ipsum</a></span>. 
+                </p>
+                <span id="sign"><p>- Mr. Pen</p></span>
+            </div>
+
+    
+        </div>
+        <!-- use br instead two p due to same css and ahref for unsubscribe -->
+        <div class="footer">
+            <p>Sent by Company Name, 1234 Yellow Brick Toad, OZ, 99999</p>
+            <p>hello@company.com | Unsubscribe</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

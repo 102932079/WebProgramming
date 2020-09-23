@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+    <style>
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        body
+        /* define backgroud color and all text font  */
+        {
+            background-color: #3e4c57;
+            font-family: Quicksand, sans-serif;
+        }
+
+        .container  
+        /* move the pannel in middle */
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .FaceTwitt
+        /* flex direction how you want the flexbox to layout */
+        {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .FaceTwitt button
+        /* define the style of button */
+        {
+            width: 250px;
+            height: 35px;
+            border: none;        
+        }
+        
+        #fb
+        /* facebook button style*/
+        {
+            background-color: #3d5a96;
+            color: #fcfffe;
+        }
+
+        #twt
+        /* twttiwe button style */
+        {
+            background-color: #59aaec;
+            color: #fcfffe;
+        }
+
+        p
+        /* define all other text */
+        {
+            text-align: center;
+            color: #fcfffe;
+            padding: 0;
+            /* maybe no need */
+            font-size: 13px;
+            font-weight: 550;
+        }
+
+        .secondP
+        /* move by text aganst border */
+        {
+            text-align: left;
+        }
+
+        .lnu
+        /* define the style of the herper link */
+        {
+            text-decoration: none;
+        }
+
+        .emailPass input
+        /* define the input bar style */
+        {
+            margin-top: 15px;
+            width: 250px;
+            height: 35px;
+        }
+
+        .fnln
+        /* first name last name bar to layout same line */
+        {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .emailPass
+        /* email bar and password bar flex layput style */
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .longInp input
+        /* define email and password bar style */
+        {
+            width: 500px;
+            margin-top: 25px;
+            padding-left: 10px;
+        }
+
+        .linkbutton
+        /* define the green create account button */
+        {
+            background-color: #44a26e;
+            text-align: center;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #linkBgreen
+        /* define the text on the button */
+        {
+            color: #fcfffe;
+            text-decoration: none;
+        }
+
+        .fnln input
+        {
+            padding-left: 10px;
+        }
+
+         /*to change color/opacity of the firstName placeholder*/
+
+        #fn::-webkit-input-placeholder
+        { /* WebKit, Blink, Edge */
+            opacity: 0.3;
+        }
+        #fn:-moz-placeholder 
+        {/* Mozilla Firefox 4 to 18 */
+            opacity: 0.3;
+        }
+        #fn::-moz-placeholder
+        {/* Mozilla Firefox 19+ */
+            opacity: 0.3;
+        }
+        #fn:-ms-input-placeholder
+        {/* Internet Explorer 10-11 */
+            opacity: 0.3;
+        }
+        /*to change color/opacity of the firstName placeholder*/
+
+
+
+    
+    
+    
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <form>
+
+            <div class="FaceTwitt">
+                <button id="fb">Connect with Facebook</button>
+                <button id="twt">Connect with Twitter</button>
+            </div>
+
+            <p>Or sign up with</p>
+
+            <div class="emailPass">
+
+                <div class="fnln">
+                    <input type="text" placeholder="First Name" id="fn">
+                    <input type="text" placeholder="Last Name">
+                </div>
+
+                <div class="longInp">
+                    <!-- line break -->
+                    <input type="text" placeholder="your@email.com"><br>
+                    <input type="text" placeholder="**********">
+                </div>
+
+                <p class="secondP">
+                    By creating an account, you agree to our <a href="#" class="lnu">Terms & Conditions</a>
+                </p>
+
+                <div class="linkbutton">
+                    <a href="#" id="linkBgreen">Create account</a>
+                </div>
+
+                <p>Template by <a href="#" class="lnu">w3Layouts</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

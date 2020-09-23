@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mukta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sen:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500&display=swap" rel="stylesheet">
+
+    <style>
+
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        body
+        /* backgroud */
+        {
+            background-color: #433b4f;
+        }
+        
+        p
+        {
+
+        }
+
+        .container
+        /* define container block */
+        {
+            width: 55%;
+            height: 30vh;
+            background-color: #ffffff;
+            margin: 60px auto;
+        }
+
+        h1
+        /* define your company */
+        {
+            text-align: center;
+            font-family: dancing script , cursive;
+            font-size: 55px;
+            color: #ffffff;
+        }
+
+        .pic img   
+        /* define img block and screch to 100%*/
+        {
+            width: 100%;
+        }
+
+        .d2 
+        /* define sprater line */
+        {
+            padding: 10px;
+            border-bottom: 0.8px dotted black;
+        }
+
+        .read  
+        /* define readmore block and its content */
+        {
+            float: left;
+            width: 75%;
+            height: 90px;
+            padding: 12px;
+            margin-left: 20px;
+            font-size: 20px;
+            color: #433b4f;
+        }
+
+        .plus 
+        /* define plus block */
+        {
+            float: right;
+            width: 20%;
+            background-color: #b67cfb;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        article
+        /* define articles */
+        {
+            float: right;
+            width: 70%;
+            padding: 20px;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: Noto Sans JP, sans-serif;
+
+        }
+
+        footer
+        /* define footer block */
+        {
+            color: #ffffff;
+            background-color: #1d1724;
+            padding: 20px;
+        }
+
+        #footerpsize
+        /* doubt this will work */
+        {
+            font-size: 16px;
+        }
+
+        .Pfsize
+        /* footer text */
+        {
+            font-size: 12px;
+        }
+
+        .Pcenter, .Pfalign
+        /* move the text to the center */
+        {
+            text-align: center;
+        }
+
+        #d2p2size
+        /* define top text */
+        {
+            font-size: 30px;
+            margin-left: 20px;
+            font-family: Inter, sans-serif;
+            color: #433b4f;
+        }
+
+        #d2p1size
+        /* define top text likes */
+        {
+            margin-left: 20px;
+        }
+
+        #sd2
+        {
+            color: #b67cfb;
+        }
+
+        .monthSpan  
+        {
+            font-family: Mukta, sans-serif;
+            color: #57466c;
+        }
+
+        .numberSpan
+        {
+            font-size: 40px;
+            color: #ffffff;
+            font-family: Sen, sans-serif;
+
+        }
+
+        footer
+        {
+            font-family: Inter, sans-serif;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>YourCompany</h1>
+    
+    <div class="container">
+        <div class="pic">
+            <img src="concert.jpg" alt="backgroud">
+        </div>
+    
+
+        <div class="d2">
+            <p id="d2p1size"> May 30, 2017 <span id="sd2">- 325 Likes</span></p>
+            <p id="d2p2size"> Lorem ipsum dolor sit amet, <br>
+                consectetur adipisicing elit.</p>
+        </div>
+    
+        <section>
+            <div class="read">
+                <p>read more...</p>
+            </div>
+
+            <div class="plus">
+                <img src="plus.png" alt="icon">
+            </div>
+        </section>
+    
+        <div class="container2">
+
+            <div class="june">
+                <!-- non-breaking space	&nbsp;	&#160; -->
+                <p>&nbsp;<span class="monthSpan">JUNE</span><b><span class="numberSpan">15</span></b></p>
+                <article>
+                    Sed ut perspiciatis unde omnis iste natus<br/>
+                    error sit voluptatem accusantium doloree<br/>
+                    laundantium, totam rem aperiam .....
+                </article>
+            </div>
+
+            <div class="july">
+                <p>&nbsp;<span class="monthSpan">JULY</span><b><span class="numberSpan">05</span></b></p>
+                <article>
+                    Ut enim ad minima veniam,quis nostrum<br/>
+                    exercitationem ullam corporis suscipit<br/>
+                    laboriosam,tur .... 
+                </article>
+            </div>
+
+            <div class="aug">
+                <p>&nbsp;<span class="monthSpan">AUG</span><b><span class="numberSpan">18</span></b></p>
+                <article>
+                    Wxcepteur sint occaecat vupidatat non<br/>
+                    proident,sunt in culpa qui officia deserunt<br/>
+                    mollit anim id est laborum....
+                </article>
+            </div>
+
+            <footer>
+                <p class="Pfalign">Lorem ipsum dolor sit amet,nsectetur adipiscing elit<br/></p>
+                <p class="Pfsize Pfalign">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis<br/></p>
+                <p class="Pcenter Pfsize">nostrud exercitation ullamco</p>
+                <!-- should be ahref here -->
+                <p class="Pcenter"> ABOUTUS|CONTACT|EVENTS|SHOP </p>
+            </footer>
+        </div>
+    </div>
+
+    
+</body>
+</html>

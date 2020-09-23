@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+
+    <style>
+        /*    *	Selects all elements */
+        *
+        {
+            box-sizing: border-box;
+        }
+
+        html , body
+        /* give a backgroud color and reset 0 on all margin */
+        {
+            background-color: #74c25a;
+            margin: 0;
+        }
+
+        .container
+        /* viewport keep container in the middle*/
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box 
+        /*  keep the box in the middle */
+        {
+            background-color: white;
+            width: 400px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0.5px 5px 9px 1px #5d5d5d;
+        }
+
+        input , button
+        /* make input bar and button bar into the same size */
+        {
+            width: 300px;
+            height: 40px;
+            border: none;
+        }
+
+        input
+        /* define input bar only */
+        {
+            background-color: #f2f2f2;
+            padding-left: 20px;
+            font-size: 15px;
+        }
+
+        button
+        {
+            background-color: #00b241;
+            color: white;
+        }
+
+        a:link
+        /* link element under a element */
+        /* define create an account */
+        /* make the backgroud thourgh */
+        {
+            color: #70cc84;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        p
+        /* define not registed */
+        {
+            padding-left: 30px;
+            color: #b8b8b8;
+            font-size: 13px;
+        }
+
+        .inputStyle
+        /* define the text style after you type in the input bar */
+        {
+            font-size: 15px;
+            padding: 40px;
+            font-family: Libre Franklin , sans-serif;
+        }
+
+        ::placeholder
+        /* firefox */
+        {
+            color: #bcbcbc;
+            opacity: 1;
+        }
+
+        :-ms-input-placeholder   /* Internet Explorer 10-11 */
+        { 
+            color: #bcbcbc;
+        } 
+
+        ::-ms-input-placeholder   /* Microsoft Edge */
+        { 
+            color: #bcbcbc;
+        }    
+    
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+
+            <div class="inpuStyle">
+                <!-- placeholder  The placeholder attribute specifies a short hint that describes the expected value of an input field -->
+                <input type="text" placeholder="username">
+                <br>
+                <br>
+                <input type="text" placeholder="password">
+                <br>
+                <br>
+                <button>LOGIN</button>
+                <p>Not registered? <a href="#">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

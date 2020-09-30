@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="input1">
+
+    <select id="menu">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+        <option value="Meh">Meh</option>
+    </select> 
+
+    <input type="number" id="input2"><br/>
+    <button type="button" onclick="clicked()" >
+    Click me</button>
+
+    <p>Value: <span id="demo"></span></p>
+
+    <script>
+
+     let input1=document.getElementById("input1");
+     let input2=document.getElementById("input2");
+     let result= document.getElementById("demo");
+       
+       function clicked()
+      { 
+        
+        let v1=parseInt(input1.value);
+        let v2=parseInt(input2.value);
+        let operator=document.getElementById("menu").value;
+
+        if( operator === "+")
+         {  result.innerHTML=v1+v2; }
+
+        if( operator === "-")
+         {  result.innerHTML= v1-v2; }
+       
+        if( operator === "x")
+         {  result.innerHTML= v1*v2; }
+
+        if( operator === "/")
+         {  result.innerHTML= v1/v2; }
+
+        if( operator === "Meh")
+        {
+          window.alert("whoa there buddy,stop playing with me, that's not an operation");
+        }
+       
+      }
+      
+      
+     
+    
+    </script>
+</body>
+</html>

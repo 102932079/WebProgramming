@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex Task1</title>
+</head>
+<body>
+    <input type="number" id="input1">
+    <br>
+    <h1>+</h1>
+    <br>
+    <input type="number" id="input2">
+    <button type="button" id="myButton">Click me please.</button>
+    <br>
+    <br>
+    <p id="result">Value:</p>
+    <script>
+        //let input1 = parseFloat(document.getElementById("input1"));  element and value is number need to separate declared
+        //let input2 = parseFloat(document.getElementById("input2"));
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");      
+        
+        //let inputvalue1 = parseFloat(input1.value);  not working NAN
+        //let inputvalue2 = parseFloat(input2.value);  not working NAN
+        
+        let result = document.getElementById("result");
+        let myButton = document.getElementById("myButton");
+
+        myButton.onclick = function ()
+        {
+            //some how the declar value parts need to be in the body!!
+            let inputvalue1 = parseFloat(input1.value);
+            let inputvalue2 = parseFloat(input2.value);
+            let answer = inputvalue1 + inputvalue2;
+            result.innerHTML = "Value: " + answer; // result: NAN
+        }
+        //Unchecked runtime.lastError: The message port closed before a response was received.
+        // NAN The global NaN property is a value representing Not-A-Number.  
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex Task2</title>
+</head>
+<body>
+    <input type="number" id="input1">
+
+    <!-- selcet menu value (option to display) -->
+    <select id="menu">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="Meh">Meh</option>
+    </select>
+
+    <input type="number" id="input2">
+    <br>
+    <button type="button" id="myButton">Click me please.</button>
+    <br>
+    <p id="result">Value:</p>
+
+    <script>
+        let input1 = document.getElementById("input1");
+        let input2 = document.getElementById("input2");
+        let result = doucument.getElementById("result");
+        //Ex Task2.html:29 Uncaught ReferenceError: doucument is not defined keeping saying this is worng.
+        let myButton = document.getElementById("myButton");     
+        
+
+        //make button click event and define body code        
+        myButton.onclick = function()
+        {
+            
+            //value ralated defined in method and convert them
+            let inputvalue1 = parseFloat(input1.value); // type number
+            let inputvalue2 = parseFloat(input2.value);
+
+            //declar operater and make it a conditon to excu calculation
+            let operater = document.getElementById("menu").value; // type string
+
+            if ( operater === "+" )
+            {
+                result.innerHTML = inputvalue1 + inputvalue2;
+            }
+
+            if ( operater === "-" )
+            {
+                result.innerHTML = inputvalue1 - inputvalue2;
+            }
+
+            if ( operater === "*" )
+            {
+                result.innerHTML = inputvalue1 * inputvalue2;
+            }
+
+            if ( operater === "/" )
+            {
+                result.innerHTML = inputvalue1 / inputvalue2;
+            }
+
+            if ( operater === "Meh" )
+            {
+                window.alert("whoa there buddy,stop playing with me, that's not an operation");
+            }
+            //none of the function working
+        }
+
+    </script>
+
+    
+</body>
+</html>

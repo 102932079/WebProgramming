@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- the button for change text -->
+    <div id="content">Random Text</div>
+    <!-- id need to be uniqe -->
+
+    <!-- another div for counter -->
+    <div id="content1">Counter : Nothing</div> 
+
+    <!-- element -->
+    <button id="theButton">Hello World</button>
+    <button id="theOtherButton">Count!</button>
+
+    <!-- value equal to 1 this is string you cant change it even the type is number they are never numbers-->
+    <input type="number" id="myInput" value="1" />
+
+    <!-- important to left the script at bottom, for loding the dom after the html and css have been displayed -->
+    <script type="text/javascript">
+
+    // Javascript is developed by mozilla (MDN web docs)
+// nodeJS c# need to be complied to the the program
+// JS can excute strght away
+// both js and c# c based simplier
+// F12 dev tools
+// console.log() Console.WriteLine() no need build and just run 
+// typeless
+    
+
+    // the javascrip will be display line by line in order just like c#
+    // public void main
+        // console.log("Hello World1")
+        // console.log("Hello World2")
+        // console.log("Hello World3")
+        // console.log("Hello World4")
+
+        // toggle the target element
+        let content = document.getElementById("content");
+        // we normally to create a variable for the refed element
+        let myButton = document.getElementById("theButton");
+
+        let content1 = document.getElementById("content1");
+        let myOtherButton = document.getElementById("theOtherButton");
+
+        let myInput = document.getElementById("myInput");
+
+        //content.innerHTML = "Boo!!!" // system will find this element and its text then replase the the new string
+        // inner text react simpler but will stript the html element be caerfull here differeent 
+
+        //console.log(content.innerHTML); // will return every thing in the div element usch as a tag p tag will inclued
+
+        // define the action and its method
+        myButton.onclick = onMyButtonClick(); // the the element(my button) doing sth(onclick) run the methoud(onmybuttonclick()) 
+        // tell the program wait for the action , when that happens run certain code
+
+        // define the body code for the method
+        function onMyButtonClick() { // { means the body of the code} the body will only run when i call this function
+            content.innerHTML = "Boo!!!" ;// the methoud it more like variable
+        }// function function_name (params(inpupt))
+
+        myOtherButton.onclick = function ()
+        {
+            let inputValue = parseFloat(myInput.value); // beacuse the value here is string it wont add up together return(01111111111...) so we need convert the datatype with parseInt or parseFloat
+            content1.innerHTML = "Counter: " + count;
+            //count = count + 1;
+
+            count = count + inputValue;
+            //content1.innerHTML = "Counter: " + 1; // this will not work beacuse the this is a string not number so string plus 1 dont work
+            // so we need to create a variable to store this count
+        }
+        //onMyButtonClick(); // ()here define the method(fuciotn) excu the method 
+        // to get the function onMyButtonClick / for exce the funtion we need () at the end
+
+        // perfered way to do it (simper and cleaner) the other way above is for need to recall this method somewhere else
+        //mybutton.onclick = function() {
+            //content.innerHTML = "Boo!!!";
+        //}
+    
+    //  we need to access the doucument
+    //doucument means the entrie page as element
+    // . dot ref to access
+    // pink cube icon means method
+    // the method require some point of patasis to be imported
+    // in this case id is the element
+    // this method returning a html element
+        //console.log(document.getElementById("content")) // this will return the entrie div as output
+        console.log(content) // same as above // in js ; semi conlmn is not required(but we suggest to use them beacuse sometime we lay out the code at same line that will cause error)
+
+        // be careful of while loop
+        let count = 0;
+        while(count < 10)
+        {
+            console.log(count);
+            count += 1;
+        }
+    </script>
+    
+</body>
+</html>

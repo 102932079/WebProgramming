@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+</head>
+<body>
+    <h1>Check Console</h1>
+    <script>
+        //declar count
+        let count = 0;
+        while (count < 10) // remember to set up limit to avoid overflow
+        {
+            console.log(`counting up ... Im at: ${count}`); //es6 
+            count++;
+
+            // two conditon at 5 and 9
+            if(count === 5)//same value and type
+            {                
+                console.log(`Woah mum i counted to ${count} !`);
+                console.log(`counting up ... Im at: ${count}`);
+                count++;
+            }
+            
+            if(count === 9)
+            {
+                console.log(`Look mum i can count to ${count}`)
+                //break; no need break
+            }
+        }
+        // Unchecked runtime.lastError: The message port closed before a response was received.??
+    </script>
+</body>
+</html>

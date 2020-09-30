@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <!-- Internal CSS -->
+    <style>
+        #myButton
+        {
+            padding: 13px;
+            border-radius: 5px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Time!</h1>
+    <br>
+    <button type="button" id="myButton">Whats the time javascript?</button>
+    <p id="display"></p>
+    <script>
+        // toggle element
+        let display = document.getElementById("display");
+        let myButton = document.getElementById("myButton");
+
+        myButton.onclick = function ()
+        {
+            display.innerHTML = Date();
+        }
+    </script>
+    
+</body>
+</html>

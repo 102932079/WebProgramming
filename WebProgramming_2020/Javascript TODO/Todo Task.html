@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo_Task</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form id="form">
+            <input type="text" id="input" placeholder="New Item...">
+            <button type="button" id="button">Add</button>
+        </form>
+    </div>
+    <div id="box">
+        <ul id="list">
+        </ul>
+    </div>    
+
+    <script>
+        //create all variable for all existing id
+        let input = document.querySelector('#input');
+        
+        
+
+        //define the add button the event is form submit
+        //form.addEventListener ('submit', onsubmit);
+        button.addEventListener('click', onclick);
+
+        //function onsubmit(event)
+        function onclick(event)
+        {
+            // tried move const around tried many thing but solution
+            // dont know why its not working at all 
+            // add button not working
+            //
+            let button = document.querySelector('#button');
+            let container = document.querySelector('#container');
+            let box = document.querySelector('#box');
+            let form  = document.querySelector('#form');
+            let list = document.querySelector('#list');
+            //stop from submitting
+            event.preventDefault();
+            //create new element li and pass in the value
+            let p = doument.createElement("p");
+            let content = doument.createTextNode(input.value);
+            p.innerHTML = input.value;
+            //add the li into list and empty the input
+            p.appendChild(content);
+            input.value = " ";
+        }
+    </script>
+    
+</body>
+</html>

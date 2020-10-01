@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <style>
+
+        #container
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+        #d1
+        {
+            float: left;
+            width: 54%;
+            border: 2px dotted #eac7a1;
+            margin: 0px 10px;
+            height: 340px;
+            color: #865932;
+            font-weight: bold;
+        }
+
+        #d2
+        {
+            float: left;
+            width: 42%;
+            height: 590px;
+            border: 2px dashed #eac7a1;
+            align-items: center;
+            padding: 10px;
+        }
+
+        section::after
+        {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* make this display area into scroll */
+        #d3
+        {
+            border: 2px solid #eac7a1;
+            float: left;
+            width: 54%;
+            margin: 0px 10px;
+            margin-top: -260px;
+            height: 257px;
+            overflow: scroll;
+            overflow-x: hidden;
+            background-color: bisque;
+        }
+
+        img
+        {
+            margin-left: 250px;
+            margin-top: 5px;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        #demo
+        {
+            text-align: center;
+            display: block;
+            font-size: 30px;
+        }
+
+        area, .update, a
+        {
+            cursor: pointer;
+        }
+
+        .update
+        {
+            text-align: center;
+            border: 1px solid #cccccc;
+            width: 430px;
+            margin: 25px 80px 10px 80px;
+            padding-top: 30px;
+            background-color: #eac7a1;
+        }
+
+        #p0fd3
+        {
+            font-size: 20px;
+            padding: 5px 10px;
+            letter-spacing: 1px;
+            background-color: #ffffff;
+        }
+
+        .update, #d1, #d2, #d3, #p0fd3
+        {
+            box-shadow: 0 6px 10px rgba(0,0, 0, 0.12);
+        }
+
+        #sp1
+        {
+            color: #ffffff;
+        }
+
+        .sp2
+        {
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- create border -->
+    <div id="container">
+        <!-- create interface -->
+        <section>
+            <!-- display area -->
+            <div id="d1">
+                <p id="demo"></p>
+                <p id="demo1"></p>
+                <!-- //The usemap attribute specifies an image as a client-side image map (an image map is an image with clickable areas).
+                The usemap attribute is associated with a <map> element's name attribute, and creates a relationship between the <img> and the <map>.            
+                Note: The usemap attribute cannot be used if the <img> element is a descendant of an <a> or <button> element. -->
+                <a><img src="cookie.png" usemap="#map" onclick="clicked()"></a>
+            </div>
+
+            <!-- click power and price-->
+            <div id="d2">
+                <div id="up1" class="update">
+                    <p id="nameUp"><span class="sp2">One cookie in 3 second <br></span><span id="sp1"><span id="num">15</span> cookies</span></p>
+                </div>
+                <div id="up2" class="update">
+                    <p id="nameUp"><span class="sp2">One cookie per second <br></span><span id="sp1"><span id="num2">50</span> cookies</span></p>
+                </div>
+                <div id="up3" class="update">
+                    <p id="nameUp"><span class="sp2">Two cookies per second <br></span><span id="sp1"><span id="num3">100</span> cookies</span></p>
+                </div>  
+                <div id="up4" class="update">
+                    <p id="nameUp"><span class="sp2">10 cookies per second <br></span><span id="sp1"><span id="num4">1000</span> cookies</span></p>
+                </div>
+            </div>
+        </section>
+        <div id="d3">
+            <p id="p0fd3"></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+    //initiate cookie and create variable for element
+        let cookie = 0;
+        let update1 = document.getElementById("up1");
+        let update1 = document.getElementById("up2");
+        let update1 = document.getElementById("up3");
+        let update1 = document.getElementById("up4");
+
+        let result = document.getElementById("demo");
+        let output = document.getElementById("p0fd3");
+        let outputDiv = document.getElementById("d3");
+
+        //define result text
+        result.innerHTML = cookie + "cookies";
+
+        //define cooikelog array to save history
+        let cookieLog = [];
+        let txt = "", i;
+
+        //define click function
+        function clicked()
+        {
+            // increment and update showing number
+            cookie++;
+            document.getElementById("demo").innerHTML = cookie + " cookies";
+            // javaScript Array push() Method The push() method adds new items to the end of an array, and returns the new length.
+            // Note: The new item(s) will be added at the end of the array. Note: This method changes the length of the array. Tip: To add items at the beginning of an array, use the unshift() method.
+            cookieLog.push("The cookie was clicked ...");
+
+            //upgrade option
+            update1.onclick = function ()
+            {
+                //toggle the upgrade price and make it value value will change use let
+                //num is string make it number with parseint
+                // inner text inner html (we just need pure text here)
+                //Get the content of the <p> element above with the specified properties:
+
+                // innerText returns: "This element has extra spacing and contains a span element."
+                // innerHTML returns: "   This element has extra spacing     and contains <span>a span element</span>."
+                // textContent returns: "   This element has extra spacing    and contains a span element."
+
+                // The innerText property returns just the text, without spacing and inner element tags.
+                // The innerHTML property returns the text, including all spacing and inner element tags.
+                // The textContent property returns the text with spacing, but without inner element tags.
+                let value = parseInt(document.getElementById("num").innerText);
+                //upgrade sucessful enough
+                if (cookie >= value)
+                {
+                    //update existing cookie number
+                    cookie -= value;
+                    //update existing cookie number display text
+                    result.innerHTML = cookie + " cookies";
+                    //The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+                    // call this function very 1 sec
+                    setInterval(function()
+                    {
+                        cookie++;
+                        result.innerHTML = cookie + " cookies";
+                    }, 1000);
+
+                    //update the log
+                    cookieLog.push("+1 Upgrade was purchased, you now have 1 cookie added in 3 seconds . . .");
+                    let text = " ", i;
+                    //looping thourgh array create br tag for every log has been created
+                    for (i = 0; i < cookieLog.length; i++)
+                    {
+                        text += cookieLog[i] + "<br>";
+                    }
+                    //update text display
+                    output.innerHTML = text;
+                    //update display space
+                    //The scrollTop property sets or returns the number of pixels an element's content is scrolled vertically.
+                    //The scrollHeight property returns the entire height of an element in pixels, including padding, but not the border, scrollbar or margin.
+                    outputDiv.scrollTop = outputDiv.scrollHeight;
+
+                }
+                //upgrade unsucessful not enough
+                else
+                {
+                    window.alert("you do not have enough cookies");
+                }
+            }
+
+            update2.onclick = function ()
+            {
+                let value = parseInt(document.getElementById("num2").innerText);
+                if (cookie >= value)
+                {
+                    cookie -= value;
+                    result.innerHTML = cookie + " cookies";
+                    setInterval(function()
+                    {
+                        cookie++;
+                        result.innerHTML = cookie + " cookies";
+                    }, 1000);
+
+                    cookieLog.push("+1 Upgrade was purchased, you now have 1 cookie added per second . . .");
+                    let text = " ", i;
+                    for (i = 0; i < cookieLog.length; i++)
+                    {
+                        text += cookieLog[i] + "<br>";
+                    }
+                    output.innerHTML = text;
+                    outputDiv.scrollTop = outputDiv.scrollHeight;
+                }
+                else
+                {
+                    window.alert("you do not have enough cookies");
+                }
+            }
+
+            update3.onclick = function ()
+            {
+                let value = parseInt(document.getElementById("num3").innerText);
+                if (cookie >= value)
+                {
+                    cookie -= value;
+                    result.innerHTML = cookie + " cookies";
+                    setInterval(function()
+                    {
+                        cookie++;
+                        result.innerHTML = cookie + " cookies";
+                    },1000);
+
+                    cookieLog.push("+1 Upgrade was purchased, you now have 2 cookies added per second . . .");
+                    let text = " ", i;
+                    for (i = 0; i < cookieLog.length; i++)
+                    {
+                        text += cookieLog[i] + "<br>";
+                    };
+                    output.innerHTML =text;
+                    outputDiv.scrollTop = outputDiv.scrollHeight;
+                }
+                else
+                {
+                    window.alert("you do not have enough cookies");
+                }
+            }
+
+            update4.onclick = funciton ()
+            {
+                let value = parseInt(document.getElementById("num4").innerText);
+                if(cookie >= value)
+                {
+                    cookie -= value;
+                    result.innerHTML = cookie + " cookie";
+                    setInterval(function () 
+                    {
+                        cookie += 10;
+                        result.innerHTML = cookie + " cookies";
+                    },1000);
+
+                    cookieLog.push("+1 Upgrade was purchased, you now have 10 cookies added per second . . .");
+                    let text = " ", i;
+                    for (i = 0; i < cookieLog.length; i++)
+                    {
+                        text += cookieLog[i] + "<br>";
+                    }
+                    output.innerHTML = text;
+                    outputDiv.scrollTop = outputDiv.scrollHeight;
+                }
+                else
+                {
+                    window.alert("you do not have enough cookies");
+                }            
+            }
+
+            let text = " ", i;
+            for (i = 0; i < cookieLog.length; i++)
+            {
+                text += cookieLog[i] + "<br>";
+            }
+            output.innerHTML = text;
+            outputDiv.scrollTop = outputDiv.scrollHeight;
+        }
+    </script>
+</body>
+</html>

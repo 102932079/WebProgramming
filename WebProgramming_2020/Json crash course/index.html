@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON sandbox</title>
+</head>
+<body>
+    <ul id="people"></ul>
+    <script>
+        /*
+        //create a variable called person set that to object
+        //js object
+        var person = 
+        {
+            name: "Brad",
+            age: 35,
+            address:
+            {
+                street:"5 main st",
+                city: "Boston"
+            },
+            children:["Brianna", "Nicholas"]
+            // email: function()
+            // {
+            //     return 'brad@gmail.com'
+            // }
+
+            
+        }
+        //array of people
+        var people =
+        [
+            {
+                name:"Brad",
+                age:35
+            },
+            {
+                name:"John",
+                age:40
+            },
+            {
+                name:"Sara",
+                age:25
+            }
+        ];
+        
+        console.log(people[1].age);
+
+        //use for loop in the array 
+        var output = "";// set the output to nothing 
+        for (var i = 0; i < people.length; i++)
+        {
+            output += '<li>' + people[i].name + '</li>';//concatenate this will go thourgh and append to the output every iteration
+            //for each interation we output the variable and going to append on to it
+            //console.log(people[i]);
+            //for the index we are going to use the current iteration which is the i variable
+        }
+
+        document.getElementById('people').innerHTML = output;
+        //the return for this is the loop thourght and return the each object  
+
+
+
+        // set i to 0, as long as i smaller than people length we incement i by 1 for looping through the array
+        //console.log(person.address.street);
+        //console.log(person.children[1]);
+        //person = JSON.stringify(person);//type = json
+        //person = JSON.parse(person); // type = object
+
+        //console.log(person.name);// will be undifined
+        //cant use alert due to its a object
+        //console.log(person.email());
+        */
+        //XML HttpRequest
+        //Sending an XMLHttpRequest
+        //A common JavaScript syntax for using the XMLHttpRequest object looks much like this:
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            //console.log(xhttp.responseText);//need xaapm host nodejs npm install(live-server)
+            var response = JSON.parse(xhttp.responseText);
+            var people = response.people;
+            //console.log(response.people);
+            var output = "";
+        for (var i = 0; i < people.length; i++)
+        {
+            output += '<li>' + people[i].name + '</li>';            
+        }
+
+        document.getElementById('people').innerHTML = output;
+        // // Typical action to be performed when the document is ready:
+        // document.getElementById("demo").innerHTML = xhttp.responseText;
+        }};
+        xhttp.open("GET", "people.json", true);
+        xhttp.send();
+
+    </script>
+</body>
+</html>

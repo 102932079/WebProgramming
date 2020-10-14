@@ -56,7 +56,11 @@ export class ArticlesService
         //this.art = response.articles;
 
 
-        })
+        },
+        (error) => {
+            console.log("Error from http://swindev.me/articles", error);
+        }
+        );
         // .where(x=> x.Id == "1")
     }
     // methods anonymous circle

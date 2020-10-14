@@ -1,0 +1,29 @@
+<!-- some angular command ng n --help (step by step) -->
+<!-- in this project we are using  ng new (create new project)AngularRouting (means the new project is angularrouting)--directory(means make drectory) . (dot means this directroy) -S (means skip test)-->
+<!-- the system will ask you to create routing for you but in this project no beacuse we are going to show to crate routing from strach -->
+<!-- the asset folder can keep the resorce like pictures for html -->
+<!-- polyfills.ts is for all sorts of the browers -->
+<!-- main.ts is for the application to be launches -->
+
+<h1>Routing</h1>
+<ul>
+  <li>
+    <!-- <a href="/cats">Cats</a>  -->
+    <a routerLink="/cats">Cats</a> 
+    <!-- the routerlink stop you from reloading -->
+    <!-- for powerful single page component, no need to re-get api -->
+    <!-- this will create the link for swaping compoents and the pages is refereshed relaoding-->
+  </li>
+  <li>
+    <!-- <a href="/dogs">Dogs</a> -->
+    <a routerLink="/dogs">Dogs</a>
+  </li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+<!-- run the server ng serve(this will take a while for modify) -->
+<!-- side by side -->
+<!-- angular doc -->
+
+<!-- ng g(means generate) c (means compenents) -->

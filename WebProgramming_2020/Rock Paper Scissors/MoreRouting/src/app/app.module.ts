@@ -4,10 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 // app routing module as well
 import { AppComponent } from './app.component';
+import { ColourPickerComponent } from './routes/colour-picker/colour-picker.component';
+import { ColourDisplayComponent } from './routes/colour-display/colour-display.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ColourPickerComponent,
+    ColourDisplayComponent
   ],
   imports: [
     BrowserModule,

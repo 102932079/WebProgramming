@@ -1,0 +1,18 @@
+/* define some colours */
+.box {
+    width: 100px;
+    /* % wont work here angular dont read percentage?*/
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* box with the colour class red */
+.box.red {
+    background-color: red;
+}
+
+.box.blue {
+    background-color: blue;
+}

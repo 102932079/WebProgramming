@@ -1,2 +1,54 @@
+<!-- the things we need for html is router outlet for root component -->
+<router-outlet></router-outlet>
+
+<!-- intial work -->
 <!-- ng new MoreRouting -S --skip-git -->
 <!-- ng serve -o -->
+
+<!-- get staring -->
+<!-- clean out html -->
+<!--  the first step here is define routes -->
+<!--  pass data beween routes using service -->
+<!-- create router outlet at root conpoent -->
+<!-- create some route -->
+<!-- create directory for routes under app -->
+<!-- move into routes in terminal -->
+<!-- ng g c ColourPicker (generate component called colour picker)allow to pick a colour -->
+<!-- (generate another component called colour display)all to display what we have selected -->
+<!--  those two component will be locate at root directory for routes -->
+
+<!-- the next thing we do is deploy routes and define how we can access the routes in app-routing.module.ts using url as array-->
+<!-- defining route in app-routing.module.ts and inspect in browser -->
+<!-- there are few way to doing this pick and display -->
+<!-- 1 use route parameter (query parameter or url)-->
+<!-- 2 use service, service existing in application entire time make service accessable from other component or other service-->
+<!-- use service method for this project allow us to navgating changing beween pages, save the colour choose for api endpoint-->
+<!-- go back to root directory for generate service ng g s Colour the system will automaticlly add service at the back of its name-->
+<!-- it got class and service in there it got some error for colourservice but we dont care about that error -->
+<!-- this service will be used by different component and store data -->
+<!-- two component we have created have no way to communicate between eachother, service can be navgation between each other-->
+<!-- import the service in colour-picker.component.ts top and in ctor -->
+<!-- go to colour pick css to define some colours the go to html to define some box red blue div class -->
+<!-- define click event define selectoption method in colour-picker.component.ts-->
+<!-- find a way to store data and also define what to do after selected this element make a http request in the service-->
+<!-- define commitselection in colour.service.ts -->
+<!-- after the accessing the selection we need to define how to routing it to display component -->
+<!-- import router and create private variable for this router and define how to navigate in method-->
+<!-- result is when tap on colour block the component will goes to display without reloading the page instantly-->
+<!-- we can add some kind of delay here for better demonstration -->
+<!-- navigate the action  -->
+
+<!-- import the service into the display component -->
+<!-- create variable public -->
+<!-- get and set for selection in service -->
+<!-- showing the public variable in the display component  -->
+<!-- the page will go blank from this point due to the variable turns into null when refreshed -->
+<!-- test again when you choose pick blue block after 3 sec the component will rough to display by showing blue text -->
+<!-- for this solution above is the common way to pass information and value between the route without using the parameter has been recall-->
+<!-- we want to do sth when it changes until it changes we can go navigate the route for certain change-->
+<!-- create a link to goes back to colour picker -->
+<!-- import router to display component for automatically goes back to picker if no result -->
+<!-- and router has been define automatically does that defined in display component ts-->
+<!-- create another empty div in picker html -->
+<!-- add some css for picker -->
+<!-- those demo will assist me to do the rsp game, picker for game interface win lose for the display interface -->

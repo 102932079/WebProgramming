@@ -1,0 +1,9 @@
+1. Create an enabled option on the Logger Service
+2. Create a component that can toggle (not the value) in the LoggerService
+3. Making the toggle button a checkbox that keeps track of the state
+
+
+
+value = true
+value = !value
+value == false

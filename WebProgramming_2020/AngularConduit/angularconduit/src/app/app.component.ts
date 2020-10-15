@@ -4,7 +4,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { ArticlesEnvelope, Article } from "./article";
 
-import { ArticlesService}
+import { ArticlesService } from "./articles.service";
+
+import { UserService } from "./user.service";
 @Component
 (
   {
@@ -25,9 +27,13 @@ export class AppComponent
   // httpclient - articlesservice
   // make it public to allow template file to access it
   public articlesService: ArticlesService;
-  constructor( articlesService: ArticlesService)
+  constructor( articlesService: ArticlesService, private userService: UserService)
   {
     this.articlesService = articlesService;
+  }
+
+  performLogin() {
+    this.userService.login() 
   }
 
   create()

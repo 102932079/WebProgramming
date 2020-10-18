@@ -1,0 +1,15 @@
+see angular io for more detail
+-set up enviorment
+npm install -g @angular/cli
+
+-strat the project
+ng new my-app(name of the project)
+no need routing(for this project) css
+
+-Run the application
+ng serve --open
+
+-initialling clean html create component
+ng generate
+ng generate component (component name)
+need goes into the project before use the command above

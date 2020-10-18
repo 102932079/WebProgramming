@@ -1,1 +1,8 @@
-<p>contact-list works!</p>
+<!-- showContact in service -->
+<!-- *ngIf concept : A structural directive that conditionally includes a template based on the value of an expression coerced to Boolean. When the expression evaluates to true, Angular renders the template provided in a then clause, and when false or null, Angular renders the template provided in an optional else clause. The default template for the else clause is blank. -->
+<!-- <app-contact-component> showing angular js -->
+<!-- define ContactsService in ts -->
+<!-- With *ngFor, the <div> repeats for each product in the list. -->
+<div *ngIf="ContactsService.showContacts === true">
+    <app-contact-component *ngFor="let contact of ContactsService.contact" [contact]="contact"></app-contact-component>
+</div>

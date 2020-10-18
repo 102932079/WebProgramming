@@ -9,7 +9,12 @@ no need routing(for this project) css
 -Run the application
 ng serve --open
 
--initialling clean html create component
+-initialling clean html 
+
+-create component
 ng generate
 ng generate component (component name)
 need goes into the project before use the command above
+
+-Add services
+ng generate service (servicename)

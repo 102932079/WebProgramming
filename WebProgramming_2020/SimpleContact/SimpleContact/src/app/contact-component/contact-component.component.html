@@ -1,1 +1,13 @@
-<p>contact-component works!</p>
+<div>
+    <div class="mainDiv">
+        <!-- An attribute directive that updates styles for the containing HTML element. -->
+        <!-- need define geturl() method in ts -->
+        <div class="profile" [ngStyle]="{'backgroud-image': getUrl()}"></div>
+        <div class="nameAddress">
+            <!-- {{variable}} -->
+            <!-- contact @input() -->
+            <p id="title">{{contact.Title}}.{{contact.Name}}</p>
+            <p id="add">{{contact.Address}}</p>
+        </div>
+    </div>
+</div>

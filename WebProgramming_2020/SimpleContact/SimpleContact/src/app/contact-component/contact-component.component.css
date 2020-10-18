@@ -1,0 +1,50 @@
+:host
+/* The :host() CSS pseudo-class function selects the shadow host of the shadow DOM containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host. */
+/* move to center flexbox grid */
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* . for class */
+.mainDiv
+{
+    border: 1px solid black;
+    width: 500px;
+    padding: 20px;
+    height: 80px;
+    position: relative;
+    border-radius: 5px;
+    
+}
+
+.profile
+{
+    border: 1px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    background-size: cover;
+    margin-left: 20px;
+    margin-top: -7px;
+}
+
+.nameAddress
+{
+    display: inline-block;
+    margin-left: 20px;
+    position: absolute;
+}
+/* # for id */
+#title
+{
+    font-size: 40px;
+    margin-top: -7px;
+}
+#add
+{
+    font-size: 20px;
+    margin-top: -40px;
+}

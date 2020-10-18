@@ -1,6 +1,8 @@
+import { typeSourceSpan } from '@angular/compiler';
 import { Injectable } from '@angular/core';
-//import with contact(class)
-import { Contact } from './contact-component/contact.ts';
+import { TimeoutError } from 'rxjs';
+//import with contact(class) no need .ts
+import { Contact } from './contact-component/contact';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +10,13 @@ import { Contact } from './contact-component/contact.ts';
 
 export class ContactsService {
 
-  //constructor() { }
+  // insert contact as array(list)
   contact : Contact[] = [
-    new Contact
-  ]
+    new Contact("Mr", "Name1", "Address1", "url('assets/user.png')"), 
+    new Contact("Mr", "Name2", "Address2", "url('assets/user.png')"), 
+    new Contact("Mr", "Name3", "Address3", "url('assets/user.png')"), 
+    new Contact("Mr", "Name4", "Address4", "url('assets/user.png')"), 
+  ];
+  showContacts: boolean = true;
+  constructor() { }
 }

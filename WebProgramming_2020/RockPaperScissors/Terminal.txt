@@ -36,3 +36,5 @@ ng generate service <name>
 
 npm install --save-dev @angular-devkit/build-angular
 npm update
+
+-no random comp selection part, no draw result(only win conditon set variable for comp selection will be always lose)

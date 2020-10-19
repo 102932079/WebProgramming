@@ -36,7 +36,7 @@
 
 .rock{
     background-image: url('/game/src/assets/rock.png');
-    background-size: cover;
+    background-size: cover;    
 }
 
 .paper{

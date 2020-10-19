@@ -9,9 +9,9 @@
         <!-- click event and selectoption is new stuff (method) in the () is the option you defined in method-->
         <!-- ng class The CSS classes are updated as follows, depending on the type of the expression evaluation: string array object-->
         <!-- ng style to change div border style -->
-        <div class="box rock" [ngStyle]="{'border' : rockSelected ? '1px solid black' : '5px solid red'}" (click)="selected('rock')">Rock</div>
-        <div class="box paper" [ngStyle]="{'border' : paperSelected ? '1px solid black' : '5px solid red'}" (click)="selected('paper')">Paper</div>
-        <div class="box scissors" [ngStyle]="{'border' : scissorsSelected ? '1px solid black' : '5px solid red'}" (click)="selected('scissors')">Scissors</div>      
+        <div class="box rock" [ngStyle]="{'border' : rockSelected ? '5px solid red' : '1px solid black'}" (click)="selected('rock')">Rock</div>
+        <div class="box paper" [ngStyle]="{'border' : paperSelected ? '5px solid red' : '1px solid black'}" (click)="selected('paper')">Paper</div>
+        <div class="box scissors" [ngStyle]="{'border' : scissorsSelected ? '5px solid red' : '1px solid black'}" (click)="selected('scissors')">Scissors</div>      
     </div>
     <!-- null option click to call method -->
     <button class="btn" (click)="buttonClicked()">Submit</button>

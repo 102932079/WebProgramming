@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+//import router and service
+import { Router } from '@angular/router';
+import { GameService } from 'src/app/game.service';
+
 
 @Component({
   selector: 'app-result',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
+  constructor(public gameService: GameService, private router: Router) { }
 
   ngOnInit(): void {
+    if(this.gameService.playerSelection == null){
+      //both " ' is ok inthis.router.navigateByUrl jump for empty page
+      this.router.navigateByUrl("/play");
+    }
   }
 
 }

@@ -1,1 +1,16 @@
-<p>results works!</p>
+<!-- game result page summary -->
+<div class="gameName">
+    <p>Rock, Paper, Scissors : Result Summary</p>
+</div>
+<div class="rpsBox">
+    <div class="resultDiv">You Win!</div>
+    <div class="flex box">
+        <div class="box" [ngClass]="nameOfClass"></div>
+        <div class="versus box">VS</div>
+        <div class="scissors box"></div>
+        <div class="rock box"></div>
+        <div class="paper box"></div>
+    </div>
+    <!-- try again button that link to play component -->
+    <button class="btn" (click)="tryAgain()">Try Again</button>
+</div>

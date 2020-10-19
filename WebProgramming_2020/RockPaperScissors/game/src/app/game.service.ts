@@ -56,6 +56,7 @@ export class GameService {
     this._playerSelection = null;
   }
 
+  //draw data out from local stroage and convert to json to webservice
   fromStorage(){
     if(this._playerSelection === undefined ){
       if(localStorage.getItem('playerSelection') != null){

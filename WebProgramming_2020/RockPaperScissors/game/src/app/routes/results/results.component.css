@@ -1,0 +1,87 @@
+:host
+{
+    display: block;
+    width: 800px;
+    height: 390px;
+    margin: 100px auto;
+    padding: 15px;
+}
+
+.rpsBox
+{
+    width: 650px;
+    height: 220px;
+    border: 1px solid #cccccc;
+    padding: 50px;
+    
+}
+
+.resultDiv
+{
+    width: 400px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 45px;
+    text-align: center;
+    color: #4c483a;
+}
+
+.flex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.box
+{
+    width: 115px;
+    height: 115px;
+    cursor: pointer;
+}
+
+.gameName
+{
+    color: black;
+}
+
+.rock   
+{
+    background-image: url('/game/src/assets/rock.png');
+    background-size: cover;
+}
+
+.paper   
+{
+    background-image: url('/game/src/assets/paper.png');
+    background-size: cover;
+}
+
+.scissors  
+{
+    background-image: url('/game/src/assets/scissors.png');
+    background-size: cover;
+}
+
+.versus
+{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 115px;
+    font-size: 20px;
+    column-rule-color: #4c483a;
+}
+
+.btn    
+{
+    margin-left: 290px;
+    margin-top: 30px;
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    font-size: 15px;
+    color: #ffffff;
+}

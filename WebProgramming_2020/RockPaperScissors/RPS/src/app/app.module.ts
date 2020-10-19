@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PlayComponent } from './routes/play/play.component';
-import { ResultComponent } from './routes/result/result.component';
+import { PlayComponent } from './play/play.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [

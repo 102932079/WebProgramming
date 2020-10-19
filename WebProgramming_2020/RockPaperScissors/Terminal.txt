@@ -33,3 +33,6 @@ ng generate service <name>
 -routes outlet in root html
 
 -define component import and path in app routing module ts
+
+npm install --save-dev @angular-devkit/build-angular
+npm update

@@ -28,4 +28,8 @@ ng generate service <name>
 
 -define component
 
---define root app component
+-define root app component
+
+-routes outlet in root html
+
+-define component import and path in app routing module ts

@@ -2,8 +2,6 @@ Todo list
 
 -set up enviorment if needed
 npm install -g @angular/cli
-npm install --save-dev @angular-devkit/build-angular
-npm update
 
 -strat the project
 routing for this project css
@@ -20,7 +18,7 @@ mkdir routes
 ng generate component <component name>
 play(game interface) result(summary)
 
--create service ( move to service folder if needed)
+-create service ( mvoe to service folder if needed)
 ng generate service <name>
 (game) to store game data
 
@@ -36,3 +34,7 @@ ng generate service <name>
 
 -define component import and path in app routing module ts
 
+npm install --save-dev @angular-devkit/build-angular
+npm update
+
+-no random comp selection part, no draw result(only win conditon set variable for comp selection will be always lose)

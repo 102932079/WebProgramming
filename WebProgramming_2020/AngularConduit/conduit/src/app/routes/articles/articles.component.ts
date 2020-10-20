@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+//import activedroute
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-articles',

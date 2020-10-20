@@ -11,6 +11,8 @@ npm install express --save
 
 npm install -g @angular/cli
 
+//ng update @angular/cli --migrate-only --from=10.0.4
+
 package.json
 
 -create app with routes
@@ -37,3 +39,7 @@ ng g c <componentname>
 -generate routes component
 ng g c <componentname>
 account airticles
+
+-ng serve --open
+
+-define class - service - component - routes - root comp - test

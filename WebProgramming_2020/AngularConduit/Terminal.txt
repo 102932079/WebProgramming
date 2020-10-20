@@ -1,1 +1,39 @@
+-repo can not be to close branching issue
+
 -environment
+npm audit fix
+
+npm install --save-dev @angular-devkit/build-angular
+
+npm update
+
+npm install express --save
+
+npm install -g @angular/cli
+
+package.json
+
+-create app with routes
+ng new <name>
+
+-init the project
+npm init(create a package.json file)
+Generate it without having it ask any questions:
+npm init -y
+
+-generate class
+ng generate class <name> [options]
+ng g class <name> [options]
+Creates a new generic class definition in the given or default project.
+
+-generate service
+ng g s <servicename>
+airticles user
+
+-generate component
+airticle-details article-list
+ng g c <componentname>
+
+-generate routes component
+ng g c <componentname>
+account airticles

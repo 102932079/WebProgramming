@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class AirticlesService {
+export class ArticlesService {
 
   // defalut to a empty array
   // dont have to define as public

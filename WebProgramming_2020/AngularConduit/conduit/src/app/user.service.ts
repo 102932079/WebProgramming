@@ -35,6 +35,8 @@ export class UserService {
     });
   }
   
+  //not a button but a component for user login function
+
   //login request, this post can be rename to login post create sth
   //login(email: string, password: string){}
   userLogin(User: user) {

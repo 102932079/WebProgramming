@@ -27,11 +27,13 @@ export class AppComponent
   // httpclient - articlesservice
   // make it public to allow template file to access it
   public articlesService: ArticlesService;
+  //import the service 
   constructor( articlesService: ArticlesService, private userService: UserService)
   {
     this.articlesService = articlesService;
   }
 
+  //local method called in service
   performLogin() {
     this.userService.login() 
   }

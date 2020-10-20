@@ -1,0 +1,14 @@
+npm init 
+package.json
+
+npm audit fix
+
+npm install --save-dev @angular-devkit/build-angular
+
+npm update
+
+npm install express --save
+
+npm install -g @angular/cli
+
+error handling http 

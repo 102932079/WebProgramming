@@ -18,13 +18,14 @@ export class UserService{
     login(email: string, password: string)
     {        
         let request = this.httpClient.post("https://swindev.me/users/login", 
-        //body
+        //body is in json user userdata schema
         {
             // remove ""
             user:{
                 //unscessful login 
                 // email: "gekki@bob.com",
                 // password: "MyPasswordIsSecure12340"
+                //get a 401 back error due to wrong login detail
 
                 // scessful loginb for that endpoint
                 // email: "string",
@@ -36,12 +37,18 @@ export class UserService{
         );
         
         
-        request.subscribe((response) => 
+        request.subscribe(
+            // first anymoutes funciton is the respond
+        (response) => 
         {
            console.log(response);
         },
         // error - anyname
+            // senond anymoutes funciotn is the error
+            // in the () is the name of the function method , it can be changed
         (error) => {
+            //basic error handling
+            // need consider the error need to be checked in the further make the error easier to spot
             if(error.status == 401){
                 alert("Login failed. Wrong username and / or password. ")
             }

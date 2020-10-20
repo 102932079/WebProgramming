@@ -4,7 +4,7 @@
 export interface UserLoginCommand {
     user:UserLoginUserData
 }
-
+//interface
 export interface UserLoginUserData {
     email: string;
     password: string;

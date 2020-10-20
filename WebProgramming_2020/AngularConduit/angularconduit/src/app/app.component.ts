@@ -35,7 +35,8 @@ export class AppComponent
 
   //local method called in service
   performLogin() {
-    this.userService.login() 
+    //username and password
+    this.userService.login("string","string") 
   }
 
   create()

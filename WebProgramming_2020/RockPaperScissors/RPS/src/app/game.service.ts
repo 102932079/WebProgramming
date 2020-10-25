@@ -55,7 +55,7 @@ export class GameService {
   //add: local api integration
   commitSelection(option: 'rock' | 'paper' | 'scissors'){
     //serverresponse is interface from models
-    let request = this.httpClient.post<serverResponse>("http://localhost:5000/RPS_/",//stil need to looking for the local port for my app
+    let request = this.httpClient.post<serverResponse>("http://localhost:4200/RPS_/",//stil need to looking for the local port for my app
     {
       playerChoice: option,
     });

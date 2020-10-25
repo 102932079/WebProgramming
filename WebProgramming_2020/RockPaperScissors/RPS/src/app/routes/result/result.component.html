@@ -5,20 +5,25 @@
 <div class="container">
     <!-- variable for result imported from service-->
     <!-- gameservice need recall in ts ctor -->
-    <h1>{{gameService.result}}</h1>
+    <div class="result"><h1>You {{gameService.result}} !</h1></div>
+    
 
-    <div class="box">
-        <div class="choice player">
-            <h2>YOU choosed {{gameService.playerSelection}}</h2>
+    <div class="boxflex" [ngClass]="playerChoiceClass">
+        <div class="box">
+            <h2>You choosed {{gameService.playerSelection}}</h2>
             <!-- need to add ngif do display the right img -->
         </div>
-        <div class="choice comp">
-            <h2>COMPUTER choosed {{gameService.compSelection}}</h2>
+
+        <div class="versus box"> VS </div>
+
+        <div class="box" [ngClass]="cpuChoiceClass">
+            <h2>Cpu choosed {{gameService.compSelection}}</h2>
         </div>
     </div>
-    <div class="btnbox">
+
+    <div>
         <!-- routerlink a quick way to jump to componet-->
-        <a routerLink="play"><button class="button">New Game?</button></a>
+        <a routerLink="play"><button class="btn">Try Again?</button></a>
     </div>
 </div>
 

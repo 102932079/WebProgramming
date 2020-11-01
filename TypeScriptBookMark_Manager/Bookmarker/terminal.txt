@@ -1,0 +1,25 @@
+check nodejs isntaller
+check git scm isntaller
+check npm isntaller
+check live server extension
+
+check npm init
+Genrate package.json
+
+install typescript
+npm install typescript --save-dev
+Generate The node_modules folder
+generate package-lock.json
+
+if need 
+npm audit fix
+npm update 
+npm fund
+
+create dist folder
+
+check package.json
+check package-lock.json
+
+check src folder
+check gitignore

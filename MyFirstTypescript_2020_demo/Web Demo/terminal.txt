@@ -1,0 +1,35 @@
+set up
+
+install git scm(for scource control in vscode side bar)
+install vs code(code editor)
+install nodejs(for ts project)
+node -v
+istall typescript(for ts project)
+typescript -v
+npm install typescript --save-dev (only the developer has the typescript dependency) this will create a package-lock.json and node medules folder(only the npm staff we installed)
+install npm(node package manager for package )
+npm -v
+npm init(defalut) package.json inside there is node package
+_gitignore
+we can create a git ignore file and add node_modules/ inside to ask git not upload the package to github save time and space
+
+initialise typescript 
+tsc --init (this will create a tsconfig.json file) similier to package.json but only configer the typescript
+target es5 the version of the javascript 
+
+create a new folder called src and put all the ts in there 
+
+create a new folder called dist for distribution output (build or dist) and add dist folder to git ignore
+
+customise the commond npm option
+
+two things changeed in tsconfig.json outDir and rootDir(input src)
+also few things changed in tsconfig but you dont have to 
+
+fix things in package.json change test to start under scripts
+
+npm start to run the project
+
+add build only for tsc (npm run-script build) or (tsc)
+
+install live server

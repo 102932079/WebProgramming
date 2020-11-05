@@ -2,7 +2,7 @@
 //The Create and List components MUST not have any @Inputs or @Outputs.
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from '../Service/planet.service'
-import { PlanetDetailComponet } from
+
 
 @Component
 ({
@@ -13,11 +13,11 @@ import { PlanetDetailComponet } from
 export class PlanetsListComponent implements OnInit 
 {
 
-  planetService: PlanetService;
+  //planetService: PlanetService;
 
   constructor(public planetservice: PlanetService)
   { 
-    this.planetService = planetservice;
+    this.planetservice = planetservice;
   }
 
   ngOnInit(): void {

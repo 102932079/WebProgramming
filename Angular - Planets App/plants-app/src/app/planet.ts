@@ -2,14 +2,16 @@
 //Create a planet class with the following properties: name: string moons: number distancefromSun: number 
 export class Planet
 {
-    name: string
-    moons: number
-    distancefromSun: number
+    Name: string;
+    Moons: number;
+    DistanceFromTheSun: number;
+    Image: string;
 
-    constructor(name:string, moons: number, distancefromSun: number)
+    constructor(name:string, moons: number, distance: number, url: string)
     {
-        this.name = name;
-        this.moons = moons;
-        this.distancefromSun = distancefromSun;
+        this.Name = name;
+        this.Moons = moons;
+        this.DistanceFromTheSun = distance;
+        this.Image = url;
     }
 }

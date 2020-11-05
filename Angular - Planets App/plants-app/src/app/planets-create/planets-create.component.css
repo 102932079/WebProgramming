@@ -1,4 +1,30 @@
-input
+/* input
 {
     width: 100px;
+} */
+
+.createBox
+{
+    position: absolute;
+    width: 175px;
+    height: 125px;
+    border: 1px solid #cccccc;
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 5px;
+    box-shadow: 2px 2px 4px #cccccc;
+    border-radius: 5px;
+}
+.save
+{
+    margin-left: 60px;
+    color: #ffffff;
+    background-color: #779eb7;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+}
+.save:hover
+{
+    background-color: #feb654;
+    color: black;
 }

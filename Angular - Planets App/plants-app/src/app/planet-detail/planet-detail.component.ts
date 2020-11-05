@@ -3,7 +3,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 //import class and service
 import { PlanetService } from '../Service/planet.service'
-import { Planet } from '../planet'
+import { Planet } from '../models/planet'
 
 @Component
 ({

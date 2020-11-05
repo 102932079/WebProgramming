@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { PlanetService } from './Service/planet.service'
+import { from } from 'rxjs';
+//import { PlanetService } from './Service/planet.service'
+import { Planet } from './models/planet';
  
 @Component({
   selector: 'app-root',

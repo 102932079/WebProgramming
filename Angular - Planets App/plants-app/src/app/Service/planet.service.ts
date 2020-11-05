@@ -2,7 +2,7 @@
 // Add a planet service, that stores planets. With the ability to add a planet, and sort them by distance from the sun.Implement this service into your list and create components when you create them.
 import { Injectable } from '@angular/core';
 //class
-import { Planet } from '../planet';
+import { Planet } from '../models/planet';
 
 @Injectable({
   providedIn: 'root'

@@ -2,7 +2,7 @@
 //The Create and List components MUST not have any @Inputs or @Outputs.
 import { Component, OnInit } from '@angular/core';
 import { PlanetService } from '../Service/planet.service';
-import { Planet } from '../planet'
+import { Planet } from '../models/planet'
 
 @Component({
   selector: 'app-planets-create',

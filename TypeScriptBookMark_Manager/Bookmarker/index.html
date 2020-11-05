@@ -3,14 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@500&family=Markazi+Text&display=swap" rel="stylesheet">
+    <!-- font-family: 'Kreon', serif; -->
+    <!-- font-family: 'Markazi Text', serif; -->
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Bookmark</title>
 </head>
 <body>
     <!-- ==================demo=================== -->
     <!-- <button id="myButton">Click Me</button>
     <div id="todoContainer"></div> -->
     <!-- ========================================== -->
+        <div class="container">
+            <!-- bookmark input area -->
+            <div class="bookMarkBox">
+                <div class="titleHeading">Your BookMark Manager</div>
+                <input type="text" id="input" placeholder="URL">
+                <br>
+                <input type="text" id="title" placeholder="Title">
 
+                <button id="myButton">Add bookmark</button>
+            </div>
+
+            <!-- Use <template> to hold some content that will be hidden when the page loads. Use JavaScript to display it: -->
+            <!-- added bookmark display area-->
+            <template id="bookmark-template">
+                <div class="flex examplebMark">
+                    <div class="icon">
+                        <img src="" alt="google favicon" class="img" width="20" height="20">
+                    </div>
+
+                    <div class="flex1">
+                        <span>Title</span>
+                        <div class="title"></div>
+                        <span>URL</span>
+                        <div class="url"></div>
+                    </div>
+
+                    <div class="buttonHolder">
+                        <button class="favorite">Fav</button>
+                    </div>
+                </div>
+            </template>
+
+            <!-- example bookmark will use same style as above-->
+            <div class="examplebMark">
+                <div class="flex">
+                    <div class="icon">
+                        <img src="https://s2.googleusercontent.com/s2/favicons?domain=www.google.com" alt="google favicon" width="20" height="20">
+                    </div>
+                    <div class="flex1">
+                        <span>Title</span>
+                        <div class="title">Google</div>
+                        <span>URL</span>
+                        <div class="url">www.google.com</div>
+                    </div>
+                    <div class="buttonHolder">
+                        <div class="favorite">Fav</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bmOutput"></div>
+        </div>
+        
     <script type="text/javascript" src="dist/index.js"></script>
 </body>
 </html>

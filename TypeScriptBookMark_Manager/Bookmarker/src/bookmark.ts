@@ -35,13 +35,29 @@ export class CreateElementBookMark {
     }
     //display the template conent function
     createBookMark(fragment: HTMLTemplateElement) {
+        //The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later.
+        //change boolean false-> true
         let instance = document.importNode(fragment.content, true);
-
+        //title
         let title = instance.querySelector('.title');
         if (title == null){
             return null;
         }
         title.innerHTML = this.bookmark.title;
+        //url
+        let url = instance.querySelector('.url');
+        if (url == null){
+            return null;
+        }
+        url.innerHTML = this.bookmark.url;
+        //icon
+        let icon = instance.querySelector('.img');
+        if (icon == null){
+            return null;
+        }
+        icon.setAttribute('src', this.bookmark.icon);
+
+        return instance;//instance is the new content of template element, fragment is the old content of template element(the variable of HTMLTemplateElement)
     }
 
 }

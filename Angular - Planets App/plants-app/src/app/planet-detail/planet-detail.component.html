@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container"> -->
     <!-- <div class="planetName"> -->
         <!-- keyup  -->
         <!-- <input type="text" (keyup)="updatePlanetName($event)" placeholder="Set Name"> -->
@@ -20,20 +20,63 @@
     <!-- user input click event  -->
     <!-- Get user input from the $event object key up -->
 
-    <p #name (click)="selectName()">{{planet.name}}</p>
+    <!-- <p #name (click)="selectName()">{{planet.name}}</p>
 
     <p #moons (click)="selectMoons()">{{planet.moons}}</p>
 
-    <p #dist (click)="selectDist()" >{{planet.distancefromSun}}</p>
+    <p #dist (click)="selectDist()" >{{planet.distancefromSun}}</p> -->
 
     <!-- ngif phase swtich-->
-    <a href="#" *ngIf="!editing" (click)="beginEdit()">Edit</a>
+    <!-- <a href="#" *ngIf="!editing" (click)="beginEdit()">Edit</a>
 
     <a href="#" *ngIf="editing" (click)="stopEdit(updatePlanetInfo.value)">Knows</a>
 
     <button id="del" (click)="deletePlanet(planet)"> Delete </button>3
     <input type="text" #updatePlanetInfo [value]="placeholder">
-</div>
+</div> -->
 
 <!-- Allow the detail component to edit the existing values of each planet. -->
 <!-- <input (keyup)="updatePlanetDist($event)" type="text" placeholder="Set Dist">  -->
+
+<div [style.marginLeft.%]="getImgMarginLeft()" class="mainDiv" (click)="planetClicked()">
+    <div class="planetImage">
+        <div>
+            <img [src]="getImage()" />
+        </div>
+        <div class="moonDiv">
+            <img src="../../assets/Moon.png" alt="moon" class="moon" *ngIf="hasMoon == true">&nbsp;
+        </div>
+    </div>
+    <!-- link the div and picture to a method by click event -->
+    <div class="iconContainer" *ngIf="clicked === true">
+        <!-- edit function -->
+        <div (click)="editPlanet()">
+            <img src="../../assets/edit.svg" alt="edit" class="icons">
+        </div>
+        <!-- delete function -->
+        <div (click)="deletePlanet()">
+            <img src="../../assets/x.svg" alt="delete" class="icons">
+        </div>
+    </div>
+
+    <div class="editBox" *ngIf="editing" [hidden]="submitted === true">
+        <form (ngSubmit)="onSubmit()" #planetForm="ngForm">
+        <!--{{diagnostic}} -- if you want to get the object in a string from-->
+
+        <input type="text" placeholder="Planet name" [(ngModel)]="planetEditing.Name" name="Name" #name="ngModel" />
+
+        <input type="number" placeholder="Number of moon" [(ngModel)]="planetEditing.Moons" name="Moons" #name="ngModel" />
+
+        <input type="number" placeholder="Distance from sun" [(ngModel)]="planetEditing.DistanceFromSun" name="DistanceFromTheSun" #name="ngModel" />
+
+        <input type="text" placeholder="Image name" [(ngModel)]="planetEditing.Image" name="Image" #name="ngModel" />
+
+        <button type="submit" class="save">Save</button>
+
+        </form>
+    </div>
+
+    <div class="planetInfo">
+        <p>{{planet.Name}}{{planet.DistanceFromTheSun}}</p>
+    </div>
+</div>

@@ -10,10 +10,11 @@ import { Planet } from './models/planet';
 })
 export class AppComponent {
   title = 'plants-app';
-  public planetsSercie = PlanetService;
+  //public planetsSercie = PlanetService;
 
-  constructor(planetService: PlanetService)
+  //constructor(planetService: PlanetService)
+  constructor()
   {
-    this.planetsSercie = PlanetService;
+    //this.planetsSercie = PlanetService;
   }
 }

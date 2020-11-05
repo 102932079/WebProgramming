@@ -12,41 +12,35 @@ export class PlanetService {
   //create planet list and fill in the list
   planets: Planet[] = 
   [
-    new Planet ("Sun", 0, 0),
-    new Planet ("Mercury", 0, 57.9),
-    new Planet ("Venus", 0, 108.2),
-    new Planet ("Earth", 0, 149.6),
-    new Planet ("Mars", 0, 227.9),
-    new Planet ("Jupiter", 0, 778.3),
-    new Planet ("Saturn", 0, 1427.0),
-    new Planet ("Uranus", 0, 2871.0),
-    new Planet ("Neptune", 0, 4497.1),
-    new Planet ("Pluto", 0, 5913.0),
+    new Planet ("Mercury", 0, 120, "../../assets/Mercury.png"),
+    new Planet ("Earth", 1, 300, "../../assets/Earth.png"),
+    new Planet ("Mars", 0, 500, "../../assets/Mars.png"),
+    new Planet ("Jupiter", 0, 620, "../../assets/Jupiter.png")
   ]
 
   constructor() { }
 
   //method 3 add sort delete
 
-  sortPlanets()
-  //sort -1 1
-  {
-    this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1:1);
-  }
+  // sortPlanets()
+  // //sort -1 1
+  // {
+  //   this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1:1);
+  // }
 
-  creatPlanet(planet: Planet)
+  pulbic addPlanet(planet: Planet)
   //push
   {
     this.planets.push(planet);
     //sort 2
-    this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1:1);
+    //this.planets.sort((a, b) => (a.distancefromSun < b.distancefromSun) ? -1:1);
   }
 
-  deletePlanet(planet: Planet)
-  {
-    //let
-    let thisPlanettoRemove = this.planets.indexOf(planet)
-    //splice splice(start: number, deleteCount?: number): Planet[]
-    this.planets.splice(thisPlanettoRemove, 1)
-  }
+  // deletePlanet(planet: Planet)
+  // {
+  //   //let
+  //   let thisPlanettoRemove = this.planets.indexOf(planet)
+  //   //splice splice(start: number, deleteCount?: number): Planet[]
+  //   this.planets.splice(thisPlanettoRemove, 1)
+  // }
 }

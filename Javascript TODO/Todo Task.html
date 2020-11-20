@@ -34,7 +34,7 @@
         function onclick(event)
         {
             // tried move const around tried many thing but solution
-            // dont know why its not working at all 
+            // don't know why its not working at all 
             // add button not working
             //
             let button = document.querySelector('#button');
@@ -45,8 +45,8 @@
             //stop from submitting
             event.preventDefault();
             //create new element li and pass in the value
-            let p = doument.createElement("p");
-            let content = doument.createTextNode(input.value);
+            let p = document.createElement("p");
+            let content = document.createTextNode(input.value);
             p.innerHTML = input.value;
             //add the li into list and empty the input
             p.appendChild(content);

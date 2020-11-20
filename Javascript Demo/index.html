@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="text/stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- +called element -->
+    <!-- the id has to be unique -->
+    <div  id="content">Random Text</div>
+    <!-- 0 -> nothing -->
+    <div  id="content1">Counter: Nothing</div> 
+    <!-- +manipulate element in JS -->
+    <button id="theButton">Hello World</button>
+    <button id="theOtherButton">Count!</button>
+
+    <!-- +create an input bar for how much that it can be increment by -->
+    <input type="number" id="myInput" value="1" /> 
+    <!-- `the value here 1 is string, and you can not change that html input field will be always string even the type is number -->
+
+    <!-- `need to at the bottom of the body tag because do the JS after loading the element -->
+    <script type="text/javascript" src="main.js">
+        //`Definition
+
+        //JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
+
+        //`non-browser environments also use it, such as Node.js
+        //`compared with C# JS is very different. C# is a complied based language mean executing command and processing to do sth the program has to complied to machine code
+        //`But JS can execute straightaway
+
+        //Java and Javascript are also different. Java and c# are C based
+
+        //empty tag then use Dev tools(F12) We can execute the JS command in browser console
+
+        //console.log() lower case and instead of writeline, clear() method
+
+        //no need to build and run each time C# will need to build and run
+
+        //variable type : define a variable let var const keyword
+
+        //variable in JS are typeless any type string - number
+
+        //number + string 55bob 5588
+
+        //!Teacher suggest that we should always create the variable for the element we are toggled
+        let content = document.getElementById("content");
+
+        //console.log("Hello World")//`only showing in dom(console) not on the page(only the html showing on page)
+        //`will execute line by line in order
+        //`when sth is change then we doing sth with JS
+        //`binding the element first before doing anything with document
+        //`access the element with dot . 
+        //then will showing the access method like get
+        //console log this
+        //`; semi column is not required in JS but better still use it because when the code line up same line it will create problem
+
+        //!Then when we reference that we only need to use the variable
+        console.log(content);
+        //console.log(document.getElementById("content"))
+
+        content.innerHTML = "Boo!!";//replace random text to boo!!!
+        //`after this called attribute and method option menu
+        //like inner HTML is the content of that element
+        //then we are able to set the content to sth else "replace"
+
+        //some advance technic for JS
+        //the system do not know when to performance the change we need to define (event activity)
+
+        //own group of code(function keyword) , method name like what event button clicked , params is the input (it can be no input) 
+        //also you will {} means represented the section of the code the collection of the code or body
+        //the section of the code only run when the method is called 
+        function name (params){}
+        function onMyButtonClick(){}
+
+        function onMyButtonClick(){//means when the button is clicked run this code below(onclick event)
+            content.innerHTML = "Boo!!!"; //use "" because of string
+        }//the define of execution could be done but have not been done yet
+        //`there is another better way to express
+        myButton.onclick = function () {
+            content.innerHTML = "Boo!!!";
+        }
+
+        //`if we want to call the method (execute the code)we need to define the code below and the ()patsies is specify the action , define to run this
+        onMyButtonClick();//the name of the function we created
+
+        //get the function
+        onMyButtonClick
+
+        //run the function
+        onMyButtonClick()
+
+        let content = document.getElementById("content");
+        let myButton = document.getElementById("theButton");
+        //this mybutton has all the attribute that content has as well , they both html element so both of them have innerHTML and has onclick event
+        //set the  event equal to sth, means when the button is click i wanna run some function or method
+        myButton.onclick = onMyButtonClick; //!not include() because we don't wanna to execute here we just want to get the method itself and pass the return value to the onclick just like a variable
+
+        ///////////////////////////////////////////////////
+        let content = document.getElementById("content");
+        let myButton = document.getElementById("theButton");
+        myButton.onclick = onMyButtonClick;
+        function onMyButtonClick() {
+            content.innerHTML = "Boo!!!"
+        }
+        onMyButtonClick();
+        ///////////////////////////////////////////////////
+
+        //make a simple counter
+        //`we could also make the code in console but the code is not visible to the user be careful
+        //so whatever we are manipulating it need to be in the browser 
+        //use the div content1 for the counter and create another button as well
+
+        //create those element and each of them  a id in html body tag
+        //then create the variable for each element
+        let content = document.getElementById("content");
+        let myButton = document.getElementById("theButton");
+
+        let content1 = document.getElementById("content1");
+        let myOtherButton = document.getElementById("theOtherButton");
+
+        //create another variable for input element
+        let myInput = document.getElementById("myInput");
+
+        //variable to save count
+        let count = 0;
+
+        //the hello world button still working but not the count button because we did bind it yet
+        myButton.onclick = onMyButtonClick;
+        function onMyButtonClick() {
+            content.innerHTML = "Boo!!!"
+        }
+        
+        //the count function, this way to make the code cleaner
+        myOtherButton.onclick = function () {
+
+            //first we need to get the value in this input field
+            //create a variable for input value in its element
+
+            let inputValue = parseFloat(myInput.value);//we just need convert this part into number with parsefloat or parseint
+            //we just need convert this part into number with parsefloat or parseint
+
+            content1.innerHTML = " Counter: " + count; // 1-count, display the count value to html
+            //wont change anything we need to create a variable to store this count
+            count = count + inputValue; 
+            //after parse now is working well
+            // 1 - inputvalue, this gives a issue that append 1 after 0 like 01111111(not counting) because the inputvalue is string
+            //count add 1 and reset to count
+            //this worked
+        }
+
+        while(true) {//condition
+            console.log("Hello World");//do one thing
+        }
+        //when not in that condition do sth else
+
+        let count = 0;
+
+        while (count < 10){
+            console.log(count);
+            count += 1;
+        }
+
+
+
+
+
+            
+    </script>
+
+</body>
+</html>

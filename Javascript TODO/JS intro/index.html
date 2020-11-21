@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .element{
+            border: 1px solid red;
+            /* the new created element born with a css style red border */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inputs">
+            <button id="doSomethingButton"></button>
+        </div>
+
+        <div class="elements" id="elements">
+            <h1>Hello World</h1>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        //First we need create variable for all those reference
+        let doSomethingButton = document.getElementById("doSomethingButton");
+        let elements = document.getElementById("elements");
+
+        //!!!!for this it got all the variable inside like a package useful some time
+        //a list in JS 
+        let myNewElements = [];//square bracket this way is means find a new array
+        //then we can add the remove element inside like how c# does
+        //this is globe variable
+
+        //means access element by variable
+
+        //Creating h1 dynamically in JS
+
+        //Add elements to our page on button click
+
+        let myNewElement = document.createElement("h1");//this only create the tag but no content so is not showing
+        //for the create element method we need use the valid tag name not just anything
+        
+        //now the h1 is created you can see them in dom but not browser, for creating the content you can do this
+        myNewElement.innerHTML = "Hello World";//this is ok but the issue is we do not want append HTML tag we need append textnode
+        
+        let myNewElementText = document.createTextNode("Hello World");//also we should create the variable for the createtextnode
+        myNewElement.appendChild(myNewElementText);//we appending that to the elements
+        
+        //add to elements div
+        elements.appendChild(myNewElement); //what we add is the new variable we have just created
+
+        //remove element 
+        elements.removeChild(myNewElement); // need to be able to executed
+
+        doSomethingButton.onclick = function () {
+            elements.removeChild(myNewElement);
+        }
+        //for the "let" keyword while creating a variable it can make the variable stay in the memory
+
+        //now it's time to define click button function, we can move all the js before all in side the onclick method to make it like this
+        doSomethingButton.onclick = function () {
+            let myNewElement = document.createElement("div");//every single element we crated is different and separated(they looks the same but they are not same)
+            let myNewElementText = document.createTextNode("Hello World");
+            myNewElement.appendChild(myNewElementText);
+            elements.appendChild(myNewElement);
+            //create the variable for all the elements we are going to use and then pass the value in layer by layer
+
+            //modify element
+            myNewElement.onclick = function() {//now we got a function inside a function this is totally fine for JS
+                console.log("Hello"); //every time we are clicking on the new element we have crated it print a hello in dom (console,not browser)
+                myNewElement.style.backgroundColor = "red";//change background color individually
+                elements.removeChild(myNewElement);//remove the new elements we created
+                //modify element
+            }
+
+            //how to create an element of textnode and also a button for remove this later
+            doSomethingButton.onclick = function() {
+                let myNewElement = document.createElement("div"); //create variable for the new div
+
+                //work with class (give certain element a class name of div)
+                myNewElement.classList.add("element");
+
+                let myNewElementButton = document.createElement("button");//create the variable for the new button
+
+                let myNewElementText = document.createElement("Hello World!");//create the new text node for the new element
+
+                myNewElementButton.innerHTML = "X";//add X textnode for new button because I know we are not going to do anything further later for the button so we use the easy way innerHTML replace the text instead of variable plus appendchild
+
+                myNewElement.appendChild(myNewElementText);
+                myNewElement.appendChild(myNewElementButton); //assemble the text and X button inside the new element
+
+                elements.appendChild(myNewElement);//elements is the display div area, mynewelement is the new element package
+
+                myNewElements.push(myNewElement);//push the new element package in the new array variable
+                //move the element in that list
+                //this is globe variable , outside the function
+                console.log(myNewElements);//by using the array variable this way it will be able to work 
+
+                //by use the array this way we can keep track of the element we have created and kept them all in array
+
+                myNewElementButton.onclick = function () {
+                    //an advance effect that remove the element who turns red with if (conditional)
+                    if(myNewElement.style.background == "red"){
+                        elements.removeChild(myNewElement);//define the function of X button to remove new elements package function
+
+                        //remove element from list(array) // it remove all element for the list so sth is wrong ()splice no slice)
+                        myNewElements = myNewElements.splice(myNewElements.indexOf(myNewElement), 1);//slicing one element
+                        //(method) Array.slice(start?: number, end?: number): any[] // splicing array at that position and end at 1
+                        //indexof() get the index of the elements
+                        //because the javascript do not have way to remove element from array so that why we are using splice()method and indexof()method
+
+                        console.log(myNewElements);
+                    }
+                    myNewElement.style.backgroundColor = "red";//or just turn the background red with the X button
+                    
+                }
+
+                doSomethingButton.onmouseover = function() {//this is not working 
+
+                    //go though every single element of an array                    
+
+                    //!!!!!!this is useful because we able to reference every single element we have created without using a single variable for every element we crated
+                    myNewElements.forEach(function(element){//this function will be executed for every element inside this array this is how JS works//not like foreach in c#
+                        myNewElement.style.background = "grey";
+
+                    })
+
+                    
+
+                }
+
+                doSomethingButton.onmouseleave = function() {
+                    myNewElements.forEach(function(element){ //like this group operation with array save time to recall each variable
+                        element.style.backgroundColor = "white";
+                    });
+                }
+
+                //the element list ()array is only useful for remove individual tasks or toggle a task completed or not 
+
+                //for remove all we can just remove all the array or the completed one such as background is red for remove them
+
+                //For todo we do not need use this much technic
+
+                //The element array and advance skill is more for the cookies clicker
+                //window setinterval() method keep doing for every certain time
+                //window settimeout() method only doing once for a time count
+
+                setTimeout(function(){ //1000ms = 1 sec
+                    alert("Hello")
+                }, 1000);
+                
+                //there will be a number of time out we can use cleartimeout() to reset it
+                setInterval(function(){
+                    console.log("Hello")
+                }, 1000);
+                //if this timing method number is 3 use this to clear out the timing method
+                clearInterval(3)
+
+                //some guide for cookie clicker auto click function
+
+                let cookies = 0;
+                setInterval(function() {
+                    cookies += 0.1; 
+                    document.getElementById("elements").innerHTML = cookies;//updating the new value for the number count displaying on div 
+                    //but the issue here is if we use innerHTML by updating the value it will be remove the other new added element
+                }, 1000);
+                console.log(cookies); //cookies will be added every sec
+                //JS have a little bit issue about the digit after dot 1.50000000001 to compare with 1.5 math round issue
+
+
+            }
+        }
+    </script>
+</body>
+</html>

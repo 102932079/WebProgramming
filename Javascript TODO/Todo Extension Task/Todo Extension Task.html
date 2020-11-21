@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- input area -->
+    <div id="container">
+        <div id="inputButtonSelect">
+            <input type="text" id="input" placeholder="New Item ...">
+            <button type="button" class="button" onclick="Add()">Add</button>
+            <button type="button" class="button" onclick="DeleteAll()">DeleteAll</button>
+            <select id="select">
+                <option>Shopping List</option>
+                <option>Assignments to do</option>
+                <option>Places to go</option>
+            </select>
+        </div>
+    </div>
+    <!-- display area -->
+    <!-- ?name or value -->
+    <div id="box">
+        <div id="div1" class="divrows" value="Shopping List">
+            <h1>Shopping List</h1>
+        </div>
+        <div id="div2" class="divrows" value="Assignments to do">
+            <h1>Assignments to do</h1>
+        </div>
+        <div id="div3" class="divrows" value="Place to go">
+            <h1>Place to go</h1>
+        </div>
+    </div>
+    <script src="scripts.js">      
+    </script>
+
+</body>
+
+</html>

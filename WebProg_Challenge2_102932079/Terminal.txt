@@ -22,6 +22,7 @@ install webpack
 npm install webpack webpack-cli --save-dev 
 create webpack.config.js manually
 template from bookmanager
+ctrl c exit with 1
 
 .gitignore y 
 
@@ -38,7 +39,7 @@ create reference in html for js
 
 wireframes y using css grid
 
-create class
+create class need import export for reference
 
 every time that before try the code need convert to js with tsc(like dotnet build)
 

@@ -4,11 +4,14 @@ install live server
 install nodejs(for ts project) y
 node -v v14.15.0
 install typescript npm 'node package manager'(for ts project) y
-npm install
+npm install --save-dev (npm install -g typescript) cross platformed
+node_module folder created
 npm -v 6.14.8
-npm init(default) package.json inside there is node package y
+npm init(default) package.json inside there is node package (all sort of confirmation) remove "main" y
+tsc -v Version 4.1.2 .ts -> .js
+tsc --init y (only configuring ts)
 .gitignore y 
-changes in tsconfig 
+changes in tsconfig outDir rootDir (src dist(build)) industry standard (input output) and other few changes 
 customize the command npm option y
     "start": "concurrently -k \"npm:build-watch\" \"npm:serve\"",
     "serve": "npx live-server --watch=\"./dist\",\"index.html\" --entry-file=./index.html",
@@ -18,3 +21,8 @@ npm install
 npm start
 
 wireframes y
+
+every time that before try the code need convert to js with tsc(like dotnet build)
+
+tsc types.ts -w (watch mode convert auto itself)
+

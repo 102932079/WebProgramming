@@ -1,18 +1,28 @@
 install git scm(for source control in vscode) y
 install vs code(code editor) y
 install live server
+
 install nodejs(for ts project) y
 node -v v14.15.0
 install typescript npm 'node package manager'(for ts project) y
 npm install --save-dev (npm install -g typescript) cross platformed
 node_module folder created
 npm -v 6.14.8
+
 npm init(default) package.json inside there is node package (all sort of confirmation) remove "main" y
+because run with web browser not node anymore (and few extra node has been added)liver server hosting the html file
+two command that constant building it and serve 
 tsc -v Version 4.1.2 .ts -> .js
 tsc --init y (only configuring ts)
+changes in tsconfig outDir rootDir (src dist(build)) industry standard (input output) and other few changes target es6
+
+install webpack
+npm install webpack webpack-cli --save-dev 
+
 .gitignore y 
-changes in tsconfig outDir rootDir (src dist(build)) industry standard (input output) and other few changes 
-customize the command npm option y
+
+customize the command npm option y (configuring node package manager on hot to execute this program)
+remove test replace with start
     "start": "concurrently -k \"npm:build-watch\" \"npm:serve\"",
     "serve": "npx live-server --watch=\"./dist\",\"index.html\" --entry-file=./index.html",
     "build-watch": "webpack --watch",
@@ -20,7 +30,10 @@ customize the command npm option y
 npm install
 npm start
 
+create reference in html for js
 wireframes y
+
+add webpack and live reloader
 
 every time that before try the code need convert to js with tsc(like dotnet build)
 

@@ -16,8 +16,12 @@ tsc -v Version 4.1.2 .ts -> .js
 tsc --init y (only configuring ts)
 changes in tsconfig outDir rootDir (src dist(build)) industry standard (input output) and other few changes target es6
 
+add webpack and live reloader
+
 install webpack
 npm install webpack webpack-cli --save-dev 
+create webpack.config.js manually
+template from bookmanager
 
 .gitignore y 
 
@@ -31,9 +35,10 @@ npm install
 npm start
 
 create reference in html for js
-wireframes y
 
-add webpack and live reloader
+wireframes y using css grid
+
+create class
 
 every time that before try the code need convert to js with tsc(like dotnet build)
 

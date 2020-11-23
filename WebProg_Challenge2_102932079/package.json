@@ -6,7 +6,7 @@
     "start": "concurrently -k \"npm:build-watch\" \"npm:serve\"",
     "serve": "npx live-server --watch=\"./dist\",\"index.html\" --entry-file=./index.html",
     "build-watch": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Foss",
   "license": "ISC",
@@ -18,5 +18,8 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^1.7.2"
-  }
+  },
+  
+  "dependencies": {},
+  "keywords": []
 }

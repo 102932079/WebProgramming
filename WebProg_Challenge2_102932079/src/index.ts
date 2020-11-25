@@ -6,3 +6,4 @@ import { Quiz, Package } from "./model";
 let display = document.getElementsByClassName("display"); //may need to change the display from class to id
 
 //`start to insert questions text
+let 

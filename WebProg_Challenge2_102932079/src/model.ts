@@ -6,11 +6,11 @@ export class Quiz{
     Option2: string;
     Option3: string;
     Option4: string;
-    Answer: string;
+    Answer: number;
     // there were Property 'Question' has no initializer and is not definitely assigned in the constructor issues after the instantiate the error will disappear
 
     //ctor
-    constructor(question: string, option1: string, option2: string, option3: string, option4: string, answer: string){
+    constructor(question: string, option1: string, option2: string, option3: string, option4: string, answer: number){ //! wrong datatype for answer (string - > number)
         this.Question = question;
         this.Option1 = option1;
         this.Option2 = option2;
@@ -24,7 +24,9 @@ export class Quiz{
 //`another class package
 export class Package {
     Quiz: Quiz; 
-    Element: HTMLElement | null; //Declaring an HTMLElement Typescript
+    Element!: HTMLElement | null; //Declaring an HTMLElement Typescript 
+    //Property 'Element' has no initializer and is not definitely assigned in the constructor '!'
+ 
     Count: number = 0; // count 1 or not 0
     CheckButton: string = '0';  // for check the answer number
 
@@ -129,7 +131,7 @@ export class Package {
     ////////////////////////////////////////////////////////////////////count point method
     //`another method of count points
     CountPoints(){
-        if (parseInt(this.CheckButton) == this.Quiz.Answer) { 
+        if (parseInt(this.CheckButton) == this.Quiz.Answer) { //` yep problem fixed if got datatype issue check the attribute and constructor
             //! This condition will always return 'false' since the types 'number' and 'string' have no overlap
             // checkbutton is string after parseint is number, answer is number , but the system still think is string
             // Converting strings to numbers with vanilla JavaScript

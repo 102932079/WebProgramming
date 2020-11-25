@@ -22,3 +22,17 @@ export class Quiz{ // there were Property 'Question' has no initializer and is n
 }
 
 //` need another class contain the quiz and some other attribute 
+export class Package {
+    Quiz: Quiz; 
+    Element: HTMLElement | null;
+    Count: number = 0; // count 1 or not 0
+    CheckButton: string = '0';  // for check the answer number
+
+    //ctor
+    constructor(pQuiz: Quiz){
+        this.Quiz = pQuiz;
+    }
+
+    //`the main function for create question and its elements
+    
+}

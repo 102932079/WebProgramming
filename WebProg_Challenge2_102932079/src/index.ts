@@ -26,6 +26,10 @@ let Quiz4 = new Quiz("Which planet in our solar system is the largest?", "a)Jupi
 let Package4 = new Package(Quiz4);
 Package4.spawn(box);
 
+let Quiz5 = new Quiz("Which ocean is the largest?", "a)Indian", "b)Pacific", "c)Atlantic", "d)Arctic",2);
+let Package5 = new Package(Quiz5);
+Package5.spawn(box);
+
 //`create a block for submit button 
 //`variable for submit button div and button element and textnode
 let SubmitDivElement = document.createElement("div");
@@ -37,4 +41,11 @@ SubmitDivElement.appendChild(SubmitButtonElement);
 SubmitButtonElement.classList.add("submit");
 box.appendChild(SubmitDivElement);
 
-
+//` onclick event recalls countpoints()  from package class for sum up the points
+SubmitButtonElement.onclick = () => {
+    Package1.CountPoints();
+    Package2.CountPoints();
+    Package3.CountPoints();
+    Package4.CountPoints();
+    Package5.CountPoints(); // missing a package
+}

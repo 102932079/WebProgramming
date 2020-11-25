@@ -66,7 +66,33 @@ export class Package {
         //`assign value to the button tag or a order of button
         option1ButtonElement.value = "1";
 
-        
+        ///////////////////////////////////////////////////////////////////////////////option2 section
+        let option2DivElement = document.createElement("div");
+        let option2ButtonElement = document.createElement("button");
+        let option2TextNode = document.createTextNode(this.Quiz.Option2);
+        option2ButtonElement.appendChild(option2TextNode);
+        option2DivElement.appendChild(option2ButtonElement);
+        option2ButtonElement.classList.add("OptionBlock");
+        option2ButtonElement.value = "2";
+
+        ///////////////////////////////////////////////////////////////////////////////option3 section
+        let option3DivElement = document.createElement("div");
+        let option3ButtonElement = document.createElement("button");
+        let option3TextNode = document.createTextNode(this.Quiz.Option3);
+        option3ButtonElement.appendChild(option3TextNode);
+        option3DivElement.appendChild(option3ButtonElement);
+        option3ButtonElement.classList.add("OptionBlock");
+        option3ButtonElement.value = "3";
+
+        ///////////////////////////////////////////////////////////////////////////////option4 section
+        let option4DivElement = document.createElement("div");
+        let option4ButtonElement = document.createElement("button");
+        let option4TextNode = document.createTextNode(this.Quiz.Option4);
+        option4ButtonElement.appendChild(option4TextNode);
+        option4DivElement.appendChild(option4ButtonElement);
+        option4ButtonElement.classList.add("OptionBlock");
+        option4ButtonElement.value = "4";
+
 
     }
 }

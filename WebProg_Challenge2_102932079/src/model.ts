@@ -129,7 +129,7 @@ export class Package {
 
     }
     ////////////////////////////////////////////////////////////////////count point method
-    //`another method of count points
+    //`another method for count points
     CountPoints(){
         if (parseInt(this.CheckButton) == this.Quiz.Answer) { //` yep problem fixed if got datatype issue check the attribute and constructor
             //! This condition will always return 'false' since the types 'number' and 'string' have no overlap

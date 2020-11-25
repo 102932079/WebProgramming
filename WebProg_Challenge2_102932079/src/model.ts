@@ -133,7 +133,7 @@ export class Package {
             //! This condition will always return 'false' since the types 'number' and 'string' have no overlap
             // checkbutton is string after parseint is number, answer is number , but the system still think is string
             // Converting strings to numbers with vanilla JavaScript
-            // The parseInt() method converts a string into an integer (a whole number).
+            // The parseInt() method converts a string into an integer (a whole number). parseFloat() Number() both no working
             this.Count = 1;
         } else {
             this.Count = 0;

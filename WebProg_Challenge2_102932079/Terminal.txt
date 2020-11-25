@@ -46,3 +46,4 @@ every time that before try the code need convert to js with tsc(like dotnet buil
 
 tsc types.ts -w (watch mode convert auto itself)
 
+got issue with nothing showing

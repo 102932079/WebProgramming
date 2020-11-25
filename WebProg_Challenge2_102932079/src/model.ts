@@ -93,6 +93,15 @@ export class Package {
         option4ButtonElement.classList.add("OptionBlock");
         option4ButtonElement.value = "4";
 
+        /////////////////////////////////////////////////////////////////////assemble them together
+        //` add all newly created div variable to element
+        this.Element.appendChild(questionDivElement); //everything were appended in the div just need to append div to the root
+        this.Element.appendChild(option1DivElement);
+        this.Element.appendChild(option2DivElement);
+        this.Element.appendChild(option3DivElement);
+        this.Element.appendChild(option4DivElement);
 
+        //` append element package to the root
+        Root.appendChild(this.Element);
     }
 }

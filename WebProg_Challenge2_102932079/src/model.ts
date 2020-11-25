@@ -27,7 +27,7 @@ export class Package {
     Element!: HTMLElement | null; //Declaring an HTMLElement Typescript 
     //Property 'Element' has no initializer and is not definitely assigned in the constructor '!'
  
-    Count: number = 0; // count 1 or not 0
+    Count: number = 0; // count 1 or not 0 a container for keeping the points
     CheckButton: string = '0';  // for check the answer number
 
     //ctor

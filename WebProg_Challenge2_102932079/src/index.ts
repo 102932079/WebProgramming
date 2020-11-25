@@ -48,4 +48,7 @@ SubmitButtonElement.onclick = () => {
     Package3.CountPoints();
     Package4.CountPoints();
     Package5.CountPoints(); // missing a package
+    let result = Package1.Count + Package2.Count + Package3.Count + Package4.Count + Package5.Count
+    alert("You got " + result + " of 5");
+    //? variable in string es5 es6 $'' how to work
 }

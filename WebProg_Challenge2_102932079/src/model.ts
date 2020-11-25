@@ -45,11 +45,28 @@ export class Package {
         //`create variable for question element
         let questionDivElement = document.createElement("div");
         //`create variable for question text and pass the value in textnode
-        let questionTextNode = document.createTextNode(this.Quiz.Question);
+        let questionTextNode = document.createTextNode(this.Quiz.Question); //create the textnode with the values of quiz.question
         //`pass the node in element
         questionDivElement.appendChild(questionTextNode);
         //`add a class name for question section
         questionDivElement.className = "QuestionBlock"; //classlist give error (read-only)
         //Using "classList", you can add or remove a class without affecting any others the element may have. But if you assign "className", it will wipe out any existing classes while adding the new one (or if you assign an empty string it will wipe out all of them).
+
+        ///////////////////////////////////////////////////////////////////////////////option1 section
+        //`create variable for option1 divelement buttonelement and textnode
+        let option1DivElement = document.createElement("div");
+        let option1ButtonElement = document.createElement("button");
+        let option1TextNode = document.createTextNode(this.Quiz.Option1);
+        //`pass option1 value in button textnode
+        option1ButtonElement.appendChild(option1TextNode);
+        //`add option1 button to option1 div
+        option1DivElement.appendChild(option1ButtonElement);
+        //`assign option1 button to optionblock
+        option1ButtonElement.classList.add("OptionBlock");
+        //`assign value to the button tag or a order of button
+        option1ButtonElement.value = "1";
+
+        
+
     }
 }

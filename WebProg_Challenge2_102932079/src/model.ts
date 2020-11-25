@@ -24,7 +24,7 @@ export class Quiz{
 //`another class package
 export class Package {
     Quiz: Quiz; 
-    Element: HTMLElement | null;
+    Element: HTMLElement | null; //Declaring an HTMLElement Typescript
     Count: number = 0; // count 1 or not 0
     CheckButton: string = '0';  // for check the answer number
 
@@ -64,7 +64,7 @@ export class Package {
         //`assign option1 button to optionblock
         option1ButtonElement.classList.add("OptionBlock");
         //`assign value to the button tag or a order of button
-        option1ButtonElement.value = "1";
+        option1ButtonElement.value = '1'; //the value here is for checkbutton string later so it should be '' not ""
 
         ///////////////////////////////////////////////////////////////////////////////option2 section
         let option2DivElement = document.createElement("div");
@@ -73,7 +73,7 @@ export class Package {
         option2ButtonElement.appendChild(option2TextNode);
         option2DivElement.appendChild(option2ButtonElement);
         option2ButtonElement.classList.add("OptionBlock");
-        option2ButtonElement.value = "2";
+        option2ButtonElement.value = '2';
 
         ///////////////////////////////////////////////////////////////////////////////option3 section
         let option3DivElement = document.createElement("div");
@@ -82,7 +82,7 @@ export class Package {
         option3ButtonElement.appendChild(option3TextNode);
         option3DivElement.appendChild(option3ButtonElement);
         option3ButtonElement.classList.add("OptionBlock");
-        option3ButtonElement.value = "3";
+        option3ButtonElement.value = '3';
 
         ///////////////////////////////////////////////////////////////////////////////option4 section
         let option4DivElement = document.createElement("div");
@@ -91,7 +91,7 @@ export class Package {
         option4ButtonElement.appendChild(option4TextNode);
         option4DivElement.appendChild(option4ButtonElement);
         option4ButtonElement.classList.add("OptionBlock");
-        option4ButtonElement.value = "4";
+        option4ButtonElement.value = '4';
 
         /////////////////////////////////////////////////////////////////////assemble them together
         //` add all newly created div variable to element
@@ -103,5 +103,40 @@ export class Package {
 
         //` append element package to the root
         Root.appendChild(this.Element);
+
+        ////////////////////////////////////////////////////////////////////onclick event for a selected effect
+        //`crate variable for all button element 1-4
+        let buttonElementArray: HTMLButtonElement[] = [option1ButtonElement, option2ButtonElement, option3ButtonElement, option4ButtonElement];
+        //Array.prototype.forEach() The forEach() method executes a provided function once for each array element.
+        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+        buttonElementArray.forEach((element) => {
+            element.onclick = () => {
+                if (element.style.backgroundColor == "#FBEFEF") {
+                    element.style.backgroundColor = "#FFFFFF";
+                }
+                else if (element.style.backgroundColor == "#FFFFFF") { // can not use else because this is not two in one condition
+                    element.style.backgroundColor = "#FBEFEF";
+                    this.CheckButton = element.value; 
+                    //? how to add the The button disabled attribute to other unselected button at the same time
+                    //document.getElementById("myBtn").disabled = true;The disabled property sets or returns whether a button is disabled, or not.
+                    //A disabled element is unusable and un-clickable. Disabled elements are usually rendered in gray by default in browsers.
+                    //this property reflects the HTML disabled attribute.
+                }
+            }
+        })
+
+    }
+    ////////////////////////////////////////////////////////////////////count point method
+    //`another method of count points
+    CountPoints(){
+        if (parseInt(this.CheckButton) == this.Quiz.Answer) { 
+            //! This condition will always return 'false' since the types 'number' and 'string' have no overlap
+            // checkbutton is string after parseint is number, answer is number , but the system still think is string
+            // Converting strings to numbers with vanilla JavaScript
+            // The parseInt() method converts a string into an integer (a whole number).
+            this.Count = 1;
+        } else {
+            this.Count = 0;
+        }
     }
 }

@@ -25,3 +25,14 @@ Package3.spawn(display);
 let Quiz4 = new Quiz("Which planet in our solar system is the largest?", "a)Jupiter", "b)Saturn", "c)Neptune", "d)Earth",4);
 let Package4 = new Package(Quiz4);
 Package4.spawn(display);
+
+//`create a block for submit button 
+//`variable for submit button div and button element and textnode
+let SubmitDivElement = document.createElement("div");
+let SubmitButtonElement = document.createElement("button");
+let SubmitTextNode = document.createTextNode("SUBMIT");
+//`assemble them and insert it to display add a class name
+SubmitButtonElement.appendChild(SubmitTextNode);
+SubmitDivElement.appendChild(SubmitButtonElement);
+SubmitButtonElement.classList.add("submit");
+display.appendChild(SubmitDivElement);

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6z2mSmvWDiVa+O7P6t7971O1lXXrtKV6DndNroSbs+C/X2JIkttvKehoyHYMnC9aBpHKQstrJSelzreLb4VisA==",
+  "success": true,
+  "projectFilePath": "D:\\github\\WebProgramming\\WebProg_Challenge2_102932079\\WebProg_Challenge2_102932079.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tengw\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\tengw\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

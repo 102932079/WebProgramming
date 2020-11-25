@@ -1,0 +1,1 @@
+// `the collection of js (import export) need go create class first

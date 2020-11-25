@@ -40,6 +40,7 @@ create reference in html for js
 wireframes y using css grid
 
 create class need import export for reference
+dotnet classlib
 
 every time that before try the code need convert to js with tsc(like dotnet build)
 

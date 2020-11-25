@@ -51,7 +51,7 @@ export class Package {
         //`pass the node in element
         questionDivElement.appendChild(questionTextNode);
         //`add a class name for question section
-        questionDivElement.className = "QuestionBlock"; //classlist give error (read-only)
+        questionDivElement.className = "questionblock"; //classlist give error (read-only)
         //Using "classList", you can add or remove a class without affecting any others the element may have. But if you assign "className", it will wipe out any existing classes while adding the new one (or if you assign an empty string it will wipe out all of them).
 
         ///////////////////////////////////////////////////////////////////////////////option1 section
@@ -64,7 +64,7 @@ export class Package {
         //`add option1 button to option1 div
         option1DivElement.appendChild(option1ButtonElement);
         //`assign option1 button to optionblock
-        option1ButtonElement.classList.add("OptionBlock");
+        option1ButtonElement.classList.add("optionblock");
         //`assign value to the button tag or a order of button
         option1ButtonElement.value = '1'; //the value here is for checkbutton string later so it should be '' not ""
 
@@ -74,7 +74,7 @@ export class Package {
         let option2TextNode = document.createTextNode(this.Quiz.Option2);
         option2ButtonElement.appendChild(option2TextNode);
         option2DivElement.appendChild(option2ButtonElement);
-        option2ButtonElement.classList.add("OptionBlock");
+        option2ButtonElement.classList.add("optionblock");
         option2ButtonElement.value = '2';
 
         ///////////////////////////////////////////////////////////////////////////////option3 section
@@ -83,7 +83,7 @@ export class Package {
         let option3TextNode = document.createTextNode(this.Quiz.Option3);
         option3ButtonElement.appendChild(option3TextNode);
         option3DivElement.appendChild(option3ButtonElement);
-        option3ButtonElement.classList.add("OptionBlock");
+        option3ButtonElement.classList.add("optionblock");
         option3ButtonElement.value = '3';
 
         ///////////////////////////////////////////////////////////////////////////////option4 section
@@ -92,7 +92,7 @@ export class Package {
         let option4TextNode = document.createTextNode(this.Quiz.Option4);
         option4ButtonElement.appendChild(option4TextNode);
         option4DivElement.appendChild(option4ButtonElement);
-        option4ButtonElement.classList.add("OptionBlock");
+        option4ButtonElement.classList.add("optionblock");
         option4ButtonElement.value = '4';
 
         /////////////////////////////////////////////////////////////////////assemble them together

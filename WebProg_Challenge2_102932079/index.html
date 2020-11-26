@@ -18,6 +18,8 @@
         {
             font-family: 'Roboto', sans-serif;
             background-color: #f0f1f2;
+            margin: 0px;
+            padding: 0px;
         }
         .container
         {            
@@ -26,33 +28,39 @@
         #display
         {
             display: grid;
-            grid-template-columns: 1fr 1fr;                     
-            margin: 10% auto;            
+            grid-template-columns: 1fr 1fr;                                
+            margin: 10% auto; 
+          
             height: 100%;
-            width: 50%;
-            background-color: #90A8A5;
-            border: 1px solid black;           
+            width: 50%;            
+                       
         }
         .box
-        {
-            border: 1px solid black;        
+        {   
+  
+            display: block;           
+                   
         }
         .questionblock
-        {
+        {   
+
+            float: left;
             background-color:#e4f7e4;
-            width:100%;
-            border: 1px solid black;
-        }
-        .optionblock
-        {
+            width:50%;
             
         }
+        .optionblock
+        {   
+            float: right;
+            width:25%;
+        }
         .submit
-        {
+        {   
+            
             background-color:#e4f7e4;
             width:100%;
-            height: 40px;
-            border: 1px solid black;
+            height: 100%;
+            
         }   
 
     </style>

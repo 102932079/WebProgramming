@@ -8,11 +8,53 @@
     <!-- ref a commonly used font Roboto 400 -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- CSS rules to specify families | font-family: 'Roboto', sans-serif; -->
+    <!-- https://www.youtube.com/watch?v=jV8B24rSN5o&t=965s CSS Grid Layout-->
     <style>
-        #display
+        body
+        {  
+
+        }
+        *
         {
             font-family: 'Roboto', sans-serif;
+            background-color: #f0f1f2;
         }
+        .container
+        {            
+            
+        }
+        #display
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr;                     
+            margin: 10% auto;            
+            height: 100%;
+            width: 50%;
+            background-color: #90A8A5;
+            border: 1px solid black;           
+        }
+        .box
+        {
+            border: 1px solid black;        
+        }
+        .questionblock
+        {
+            background-color:#e4f7e4;
+            width:100%;
+            border: 1px solid black;
+        }
+        .optionblock
+        {
+            
+        }
+        .submit
+        {
+            background-color:#e4f7e4;
+            width:100%;
+            height: 40px;
+            border: 1px solid black;
+        }   
+
     </style>
 </head>
 <body>

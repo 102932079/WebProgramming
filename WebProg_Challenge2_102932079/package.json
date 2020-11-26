@@ -12,7 +12,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.2.0",
+    "css-loader": "^5.0.1",
     "live-server": "^1.2.1",
+    "style-loader": "^2.0.0",
     "ts-loader": "^7.0.4",
     "typescript": "^3.8.3",
     "webpack": "^4.44.2",

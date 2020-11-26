@@ -1,4 +1,4 @@
-
+import "./styles.css"; // css
 //the collection of js  need go create class first with export
 //remember to import my class
 import { Quiz, Package } from "./model";
@@ -40,7 +40,7 @@ let SubmitTextNode = document.createTextNode("SUBMIT");
 SubmitButtonElement.appendChild(SubmitTextNode);
 SubmitDivElement.appendChild(SubmitButtonElement);
 SubmitButtonElement.classList.add("submit");
-box.appendChild(SubmitDivElement);
+display.appendChild(SubmitDivElement);
 
 //` onclick event recalls countpoints()  from package class for sum up the points
 SubmitButtonElement.onclick = () => {

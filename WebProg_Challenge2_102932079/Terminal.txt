@@ -54,3 +54,11 @@ display: grid;
 grid-template-columns 50 25 25 repeat(2, 2fr 1fr)
 grid-column-gap 20px
 grid-auto-rows: 100px minmax(100px,auto)
+
+npm install --save-dev style-loader css-loader
+
+How to configure CSS with webpack
+
+https://blog.jakoblind.no/css-modules-webpack/#:~:text=To%20be%20able%20to%20use,module%20keyword%20in%20your%20webpack.
+
+create css file in src folder and import in index.html

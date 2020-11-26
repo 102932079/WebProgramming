@@ -1,3 +1,29 @@
-commomly used loader
+commonly used loader
 css/style loader
 typescript loader
+
+npm install -g webpack
+
+//to use the dev server
+npm install webpack-dev-server
+//////////////////////////////////////////////////////////////////////////////////////////
+starting the project
+
+need to have node.js installed first before using webpack
+see how to install node js here https://phoenixnap.com/kb/install-node-js-npm-on-windows
+npm install -g npm
+if manually install use node -v and npm -v to check
+
+after install webpack
+npm install -g webpack
+
+using npm init for generate dependencies 
+
+create index.html in script source will be bundle.js (webpack endpoint)
+
+create app.js (source file of js)
+
+back to terminal use
+webpack app.js bundle.js (bundle is the compiled file)
+system will ask me to install CLI for webpack
+(the new node_module appeared and new package-lock.json appeared)

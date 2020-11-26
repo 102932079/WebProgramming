@@ -62,3 +62,4 @@ How to configure CSS with webpack
 https://blog.jakoblind.no/css-modules-webpack/#:~:text=To%20be%20able%20to%20use,module%20keyword%20in%20your%20webpack.
 
 create css file in src folder and import in index.html
+

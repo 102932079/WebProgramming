@@ -1,4 +1,4 @@
-import "./styles.css"; // css
+
 //the collection of js  need go create class first with export
 //remember to import my class
 import { Quiz, Package } from "./model";

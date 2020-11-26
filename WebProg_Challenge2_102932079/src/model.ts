@@ -111,13 +111,13 @@ export class Package {
         let buttonElementArray: HTMLButtonElement[] = [option1ButtonElement, option2ButtonElement, option3ButtonElement, option4ButtonElement];
         //Array.prototype.forEach() The forEach() method executes a provided function once for each array element.
         //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-        buttonElementArray.forEach((element) => {
+        buttonElementArray.forEach((element) => { //!element is the temporally variable for manipulating the button element
             element.onclick = () => {
-                if (element.style.backgroundColor == "#FBEFEF") {
+                if (element.style.backgroundColor == "#facaca") {
                     element.style.backgroundColor = "#FFFFFF";
                 }
                 else if (element.style.backgroundColor == "#FFFFFF") { // can not use else because this is not two in one condition
-                    element.style.backgroundColor = "#FBEFEF";
+                    element.style.backgroundColor = "#facaca";
                     this.CheckButton = element.value; 
                     //? how to add the The button disabled attribute to other unselected button at the same time
                     //document.getElementById("myBtn").disabled = true;The disabled property sets or returns whether a button is disabled, or not.
